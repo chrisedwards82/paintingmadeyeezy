@@ -34,6 +34,10 @@ header {
 	z-index:7;
 	
 }
+#main{
+	
+}
+
 #bob{
 	position:absolute;
 	top: 0;
@@ -43,6 +47,10 @@ header {
 	z-index:8;
 	max-width: 800px;
 	background-color: rgba(0,0,255,.25);
+	background-image: url('../img/bob_bg.png');
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: 100% auto
 }
 
 footer {

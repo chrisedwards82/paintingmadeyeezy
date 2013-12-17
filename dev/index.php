@@ -31,15 +31,15 @@
 			</nav>
 		</header>
 		<section id="main">
-		<video width="30%" height="30%" id="player">
-		    <!-- Pseudo HTML5 -->
-		    <source type="video/youtube" src="http://www.youtube.com/watch?v=BBAtAM7vtgc" />
-		</video>
-		<article id='bob'>
-			<div id="mouth"></div>
-			<div id="chin"></div>
-			<div id="hand"></div>
-		</article>
+			<video width="30%" height="30%" id="player">
+			    <!-- Pseudo HTML5 -->
+			    <source type="video/youtube" src="http://www.youtube.com/watch?v=BBAtAM7vtgc" />
+			</video>
+			<article id='bob'>
+				<div id="mouth"></div>
+				<div id="chin"></div>
+				<div id="hand"></div>
+			</article>
 		</section>
 		<footer>
 			<p>copyright &copy; 2013 <a href="#">C</a>+<a href="#">C</a></p>
