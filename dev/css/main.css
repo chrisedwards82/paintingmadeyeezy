@@ -211,6 +211,11 @@ footer p a:hover {
 
 @media screen and (max-width: 800px) {
   /* line 87, ../sass/main.scss */
+  body {
+    overflow: hidden;
+  }
+
+  /* line 90, ../sass/main.scss */
   #main {
     background-color: #f00;
     width: 600px;
@@ -220,7 +225,7 @@ footer p a:hover {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 97, ../sass/main.scss */
+  /* line 100, ../sass/main.scss */
   #main {
     background-color: #0f0;
   }

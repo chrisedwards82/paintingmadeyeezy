@@ -44,13 +44,16 @@
 		<footer>
 			<p>copyright &copy; 2013 <a href="#">C</a>+<a href="#">C</a></p>
 		</footer>
-
+		<script src="js/vendor/mediaelement/mediaelement-and-player.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
+		<script src="//code.createjs.com/createjs-2013.09.25.min.js"></script>	
         <script src="js/plugins.js"></script>
+<?php include 'includes/_jslib.php'; 
+writeJSLib('js/yeezypainter/');
+?>
         <script src="js/main.js"></script>
-
+        
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

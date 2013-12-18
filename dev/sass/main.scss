@@ -84,6 +84,9 @@ footer {
 
 
 @media screen and (max-width: 800px){
+	body{
+		overflow: hidden;
+	}
 	#main {
 		background-color: #f00;
 		width: 600px;
