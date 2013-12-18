@@ -1,4 +1,5 @@
 <?php
+
 function writeJSLib($jspath){
 	if($handle = opendir($jspath)){
 		//echo "Directory handle: $handle\n";

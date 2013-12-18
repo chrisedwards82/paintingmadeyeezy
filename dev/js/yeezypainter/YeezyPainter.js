@@ -29,11 +29,26 @@ this.yeezypainter = this.yeezypainter || {};
 			_loader.loadManifest(manifest);
 		};
 		this.assetsLoaded = function(){
-			console.log('assets loaded');
+			this.initVideoPlayer();
 		};
 		
 		this.initVideoPlayer = function(){
-		
+			console.log('init video player');
+			$('video').mediaelementplayer({
+				success: function(media, node, player) {
+					//$('#' + node.id + '-mode').html('mode: ' + media.pluginType);
+					console.log("video success");
+					/*
+					KRossplayer = player;
+					KRoss.node = node;
+					KRoss.media = media; 
+					media.addEventListener('canplay',createjs.proxy(KRoss.start,KRoss));
+					media.addEventListener('timeupdate',createjs.proxy(KRoss.checkTime,KRoss))
+					*/
+				},error:function(){
+
+				}
+			});
 		};
 		
 	

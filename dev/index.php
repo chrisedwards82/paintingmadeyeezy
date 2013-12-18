@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/normalize.min.css">
+		<link rel="stylesheet" href="css/mediaelementplayer.min.css" />
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -31,7 +32,7 @@
 			</nav>
 		</header>
 		<section id="main">
-			<video width="30%" height="30%" id="player">
+			<video width="300" height="300" id="player">
 			    <!-- Pseudo HTML5 -->
 			    <source type="video/youtube" src="http://www.youtube.com/watch?v=BBAtAM7vtgc" />
 			</video>
@@ -44,8 +45,8 @@
 		<footer>
 			<p>copyright &copy; 2013 <a href="#">C</a>+<a href="#">C</a></p>
 		</footer>
-		<script src="js/vendor/mediaelement/mediaelement-and-player.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="js/vendor/mediaelement/mediaelement-and-player.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 		<script src="//code.createjs.com/createjs-2013.09.25.min.js"></script>	
         <script src="js/plugins.js"></script>
