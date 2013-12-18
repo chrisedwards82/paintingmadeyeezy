@@ -2,7 +2,7 @@ this.yeezypainter = this.yeezypainter || {};
 (function(){
 	function Sounds(phrases,loader){
 		var _soundEnabled = false;
-		var _sounds = {};
+		var _sounds = {}, _loader = loader, _ids = phrases;
 		var _init = function(){
 			if(createjs.Sound.initializeDefaultPlugins()){
 				//add audio to manifest
@@ -15,16 +15,27 @@ this.yeezypainter = this.yeezypainter || {};
 			return _soundEnabled;
 		};
 		this.getManifest = function(){
-			var ids = phrases;
 			var manifest = [];
-			for(var i=0;i < ids.length; i++){
-				manifest.push({id:ids[i], src:this.audioPath+ids[i]+'.mp3|'+this.audioPath+ids[i]+'.ogg'});
+			for(var i=0;i < _ids.length; i++){
+				manifest.push({id:_ids[i], src:this.audioPath+_ids[i]+'.mp3|'+this.audioPath+_ids[i]+'.ogg'});
 			}
 			return manifest;
 		};
+		this.playSound = function(id){
+			if(this.isSoundEnabled()){
+				if(_sounds[id]) {
+					return _sounds[id].play();
+				}else {
+					_sounds[id]=createjs.Sound.play(_loader.getResult(id).src);
+				}
+			}
+			return null;
+		}
 		this.audioPath = 'sound/';
+		//
 		_init.call(this);
 	}
+	var p = Sounds.protype;
 	yeezypainter.Sounds = Sounds;
 	
 }());

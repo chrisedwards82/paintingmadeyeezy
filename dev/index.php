@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/normalize.min.css">
-		<link rel="stylesheet" href="css/mediaelementplayer.min.css" />
+		<!--link rel="stylesheet" href="css/mediaelementplayer.min.css" /-->
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -32,10 +32,12 @@
 			</nav>
 		</header>
 		<section id="main">
-			<video width="300" height="300" id="player">
-			    <!-- Pseudo HTML5 -->
-			    <source type="video/youtube" src="http://www.youtube.com/watch?v=BBAtAM7vtgc" />
-			</video>
+			<article id="video">
+				<video width="100%" height="100%" id="player">
+				    <!-- Pseudo HTML5 -->
+				    <source type="video/youtube" src="http://www.youtube.com/watch?v=BBAtAM7vtgc" />
+				</video>
+			</article>
 			<article id='bob'>
 				<div id="mouth"></div>
 				<div id="chin"></div>

@@ -26,16 +26,7 @@ header {
 		color: #fff;
 	}
 }
-#player{
-	position: absolute;
-	top:10%;
-	width: 75%;
-	height: 70%;
-	background-color: #000;
-	z-index:7;
-	border: 1px solid #f0f;
-	
-}
+
 #main{
 	position:absolute;
 	top: 0;
@@ -43,21 +34,31 @@ header {
 	width: 75%;
 	height: 100%;
 	max-width: 800px;
-	background-color: rgba(0,0,255,.25);
+	background-color: black;
 	
+	#bob{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index:8;
+		background-image: url('../img/bob_bg.png');
+		background-repeat: no-repeat;
+		background-position: top right;
+		background-size: 100% auto;
+	}
+	#video{
+		position: absolute;
+		top:12%;
+		width: 90%;
+		height: 90%;
+		background-color: #000;
+		z-index:7;
 	
+
+	}
 }
 
-#bob{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index:8;
-	background-image: url('../img/bob_bg.png');
-	background-repeat: no-repeat;
-	background-position: top right;
-	background-size: 100% auto;
-}
+
 
 footer {
 	width: 100%;

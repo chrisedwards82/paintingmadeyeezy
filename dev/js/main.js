@@ -51,10 +51,10 @@ $(document).ready(function(){
 		158: 'truestory'
 	};
 	var phrases = [
+		'letsdoit',
 		'cloud',
 		'tree',
 		'knife',
-		'letsdoit',
 		'mountains',
 		'cornerofbrush',
 		'littlepaint',

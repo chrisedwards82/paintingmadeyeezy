@@ -152,18 +152,7 @@ header h1 {
   color: #fff;
 }
 
-/* line 29, ../sass/main.scss */
-#player {
-  position: absolute;
-  top: 10%;
-  width: 75%;
-  height: 70%;
-  background-color: #000;
-  z-index: 7;
-  border: 1px solid #f0f;
-}
-
-/* line 39, ../sass/main.scss */
+/* line 30, ../sass/main.scss */
 #main {
   position: absolute;
   top: 0;
@@ -171,11 +160,10 @@ header h1 {
   width: 75%;
   height: 100%;
   max-width: 800px;
-  background-color: rgba(0, 0, 255, 0.25);
+  background-color: black;
 }
-
-/* line 51, ../sass/main.scss */
-#bob {
+/* line 39, ../sass/main.scss */
+#main #bob {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -185,8 +173,17 @@ header h1 {
   background-position: top right;
   background-size: 100% auto;
 }
+/* line 49, ../sass/main.scss */
+#main #video {
+  position: absolute;
+  top: 12%;
+  width: 90%;
+  height: 90%;
+  background-color: #000;
+  z-index: 7;
+}
 
-/* line 62, ../sass/main.scss */
+/* line 63, ../sass/main.scss */
 footer {
   width: 100%;
   color: #fff;
@@ -199,23 +196,23 @@ footer {
   text-transform: uppercase;
   z-index: 9;
 }
-/* line 74, ../sass/main.scss */
+/* line 75, ../sass/main.scss */
 footer p a, footer p a:link, footer p a:active, footer p a:visited, footer p a:hover {
   color: #fff;
   text-decoration: none;
 }
-/* line 78, ../sass/main.scss */
+/* line 79, ../sass/main.scss */
 footer p a:hover {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 87, ../sass/main.scss */
+  /* line 88, ../sass/main.scss */
   body {
     overflow: hidden;
   }
 
-  /* line 90, ../sass/main.scss */
+  /* line 91, ../sass/main.scss */
   #main {
     background-color: #f00;
     width: 600px;
@@ -225,7 +222,7 @@ footer p a:hover {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 100, ../sass/main.scss */
+  /* line 101, ../sass/main.scss */
   #main {
     background-color: #0f0;
   }
