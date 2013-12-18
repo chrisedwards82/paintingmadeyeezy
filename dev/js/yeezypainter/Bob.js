@@ -18,14 +18,14 @@ this.yeezypainter = this.yeezypainter || {};
 	p.talk = function(phrase){
 		switch(phrase){
 			default:
-				console.log(phrase);
+			//	console.log(phrase);
 			break;
 			
 		}
 		this.sounds.playSound(phrase);
 	}
 	p.moveBrush = function(){
-		console.log('movebrush');
+	//	console.log('movebrush');
 	}
 	yeezypainter.Bob = Bob;
 }());

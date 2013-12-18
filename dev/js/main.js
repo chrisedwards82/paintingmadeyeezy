@@ -1,6 +1,5 @@
 var app;
 $(document).ready(function(){
-	
 	var desc = $("meta[name=description]").attr('content');
     var title = $(document).find("title").text();
 	$('.share-links').shareLinks({
@@ -8,7 +7,6 @@ $(document).ready(function(){
 		description:desc,
 		title:title
 	});
-	
 	var cuePoints = {
 		2:'mountains',
 		9:'cloud',
@@ -72,6 +70,9 @@ $(document).ready(function(){
 	];
 	app = new yeezypainter.YeezyPainter(phrases,cuePoints);
 	app.loadAssets();
+	$(app.bob.container).click(function(){
+		app.stop();		
+	});
 });
 
 /*

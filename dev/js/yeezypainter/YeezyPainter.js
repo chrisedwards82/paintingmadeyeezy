@@ -5,7 +5,7 @@ this.yeezypainter = this.yeezypainter || {};
 		// PRIVATE VARIABLES AND FUNCTIONS 
 		// ONLY PRIVELEGED METHODS MAY VIEW/EDIT/INVOKE 
 		// ***********************************************************************
-		var _node, _player, _media;
+		var _node, _player;
 		var _phrases = phrases;
 		var _cuePoints = cuePoints;
 		var _cuePointPlaying;
@@ -46,19 +46,18 @@ this.yeezypainter = this.yeezypainter || {};
 		this.onVideoReady = function(media, node, player){
 			//$('#' + node.id + '-mode').html('mode: ' + media.pluginType);
 			console.log("video success");
-			_media = media; 
+			this.media = media; 
 			_player = player;
 			_node = node;
-			_media.addEventListener('ended',createjs.proxy(this.ended,this));
-			_media.addEventListener('canplay',createjs.proxy(this.start,this));
-			_media.addEventListener('timeupdate',createjs.proxy(this.checkTime,this));	
+			this.media.addEventListener('ended',createjs.proxy(this.ended,this));
+			this.media.addEventListener('canplay',createjs.proxy(this.start,this));
+			this.media.addEventListener('timeupdate',createjs.proxy(this.checkTime,this));	
 		};
 		
 		this.start = function(event){
 			this.bob.talk(phrases[0]);
-			this.media = _media;
-			_media.setVolume(0);
-			_media.play();
+			this.media.setVolume(0);
+			this.media.play();
 		};
 		this.checkTime = function(event){
 			var t = Math.floor(event.currentTime);
@@ -69,6 +68,9 @@ this.yeezypainter = this.yeezypainter || {};
 			_cuePointPlaying = t;
 			//	console.log(t);
 		};
+		this.stop = function(){
+			this.media.stop();
+		}
 		this.ended = function(event){
 			console.log('video ended');
 		};
