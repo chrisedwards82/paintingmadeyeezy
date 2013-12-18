@@ -14,7 +14,7 @@ this.yeezypainter = this.yeezypainter || {};
 		var _init = function(){
 			_loader = new createjs.LoadQueue(false); 
 			this.sounds = new yeezypainter.Sounds(phrases,_loader);
-			this.bob = new yeezypainter.Bob(this.sounds);
+			this.bob = new yeezypainter.Bob('#bob',this.sounds);
 		};
 		// ************************************************************************ 
 		// PRIVILEGED METHODS 
@@ -49,6 +49,7 @@ this.yeezypainter = this.yeezypainter || {};
 			_media = media; 
 			_player = player;
 			_node = node;
+			_media.addEventListener('ended',createjs.proxy(this.ended,this));
 			_media.addEventListener('canplay',createjs.proxy(this.start,this));
 			_media.addEventListener('timeupdate',createjs.proxy(this.checkTime,this));	
 		};
@@ -58,7 +59,7 @@ this.yeezypainter = this.yeezypainter || {};
 			this.media = _media;
 			_media.setVolume(0);
 			_media.play();
-		}
+		};
 		this.checkTime = function(event){
 			var t = Math.floor(event.currentTime);
 			if(_cuePoints[t]&&t!=_cuePointPlaying){
@@ -67,7 +68,10 @@ this.yeezypainter = this.yeezypainter || {};
 			}
 			_cuePointPlaying = t;
 			//	console.log(t);
-		}
+		};
+		this.ended = function(event){
+			console.log('video ended');
+		};
 		
 		// ************************************************************************ 
 		// PUBLIC PROPERTIES -- ANYONE MAY READ/WRITE 

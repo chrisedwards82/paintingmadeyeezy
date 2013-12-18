@@ -70,7 +70,6 @@ $(document).ready(function(){
 		'bush',
 		'yellowochre'
 	];
-	
 	app = new yeezypainter.YeezyPainter(phrases,cuePoints);
 	app.loadAssets();
 });
@@ -182,40 +181,7 @@ $(document).ready(function(){
 			}
 			console.log(phrase);
 			switch(phrase){
-				case "tree":
-					this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100).animate(
-						{top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100).animate(
-							{top:171},100).animate({top:175},100).animate({top:167},100);
-					
-				break;
-				case 'knife':
-					this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100).animate(
-						{top:175},100).animate({top:167},100);
-					
-				break;
-				case 'asyouwant':
 				
-				case 'cloud':
-					this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100).animate(
-						{top:171},100).animate({top:175},100).animate({top:167},100).animate(
-							{top:171},100).animate({top:175},100).animate({top:167},100).animate(
-								{top:171},100).animate({top:175},100).animate({top:167},100);
-					
-				break;
-				case 'letsdoit':
-					this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100);				
-				break;
-				case 'littlepaint':
-				case 'yellowochre':
-					this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate(
-					{top:167},100).animate({top:174},200).animate({top:171},100).animate(
-						{top:175},100).animate({top:167},100).animate({top:175},100).animate({top:167},100);
-				break;
-				
-				default:
-					this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate(
-					{top:167},100).animate({top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100);
-				break;
 			}
 			if(this.loader){
 				if(this.sounds[phrase]) {
