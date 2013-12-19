@@ -69,7 +69,7 @@ $(document).ready(function(){
 		'yellowochre'
 	];
 	app = new yeezypainter.YeezyPainter(phrases,cuePoints);
-	app.loadAssets();
+	//app.loadAssets();
 	$(app.bob.container).click(function(){
 		app.stop();		
 	});

@@ -22,7 +22,7 @@
         <![endif]-->
 
         <header>
-			<h1>Painting made <em>Yeezy</em></h1>
+			<h1>Painting <span>made</span> <em>Yeezy</em></h1>
 			<nav>
 				<ul class="controls">
 					<li class='talk'>Make Bob Talk</li>
