@@ -33,14 +33,14 @@ this.yeezypainter = this.yeezypainter || {};
 			_loader.loadManifest(manifest);
 		};
 		this.assetsLoaded = function(){
-			this.initVideoPlayer();
+			this.dispatchEvent(YeezyPainter.ASSETS_LOADED); 
 		};
 		
 		this.initVideoPlayer = function(){
 			//console.log('init video player');
 			var success = createjs.proxy(this.onVideoReady,this);
 			var error = createjs.proxy(this.onVideoError,this);
-			$('video').mediaelementplayer({success: success,error:error});
+			$('video').mediaelementplayer({success: success,error:error,startVolume: 0.1});
 			
 		};
 		this.onVideoReady = function(media, node, player){
@@ -50,8 +50,10 @@ this.yeezypainter = this.yeezypainter || {};
 			_player = player;
 			_node = node;
 			this.media.addEventListener('ended',createjs.proxy(this.ended,this));
-			this.media.addEventListener('canplay',createjs.proxy(this.start,this));
-			this.media.addEventListener('timeupdate',createjs.proxy(this.checkTime,this));	
+			this.media.addEventListener('canplay',createjs.proxy(function(event){
+				this.dispatchEvent(YeezyPainter.VIDEO_READY);	
+			},this));
+			this.media.addEventListener('timeupdate',createjs.proxy(this.checkTime,this));
 		};
 		
 		this.onVideoError = function(evt){
@@ -77,6 +79,7 @@ this.yeezypainter = this.yeezypainter || {};
 		}
 		this.ended = function(event){
 			console.log('video ended');
+			this.dispatchEvent(YeezyPainter.VIDEO_ENDED);
 		};
 		
 		// ************************************************************************ 
@@ -89,5 +92,16 @@ this.yeezypainter = this.yeezypainter || {};
 		//private initializer
 		_init.call(this);
 	}
+	// ************************************************************************ 
+	//  STATIC PROPERTIES -- ANYONE MAY READ/WRITE 
+	// ************************************************************************
+	//
+	// Events
+	YeezyPainter.VIDEO_ENDED = 'videoEnded';
+	YeezyPainter.ASSETS_LOADED = 'assetsLoaded';
+	YeezyPainter.VIDEO_READY = 'videoReady';
+	//
+	createjs.EventDispatcher.initialize(YeezyPainter.prototype);
 	yeezypainter.YeezyPainter = YeezyPainter;
 }());
+
