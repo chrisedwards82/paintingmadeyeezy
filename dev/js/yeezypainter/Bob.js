@@ -4,13 +4,11 @@ this.yeezypainter = this.yeezypainter || {};
 		var _init = function(){
 			this.container = $(id);
 			this.mouth = $(id+'>.mouth');
-			this.chin = $(id+'>.chin');
 			this.brush = $(id+'>.brush');
 		};
 		this.sounds = sounds;
 		this.container = null;
 		this.mouth = null;
-		this.chin = null;
 		this.brush = null;
 		_init.call(this);
 	}

@@ -38,19 +38,18 @@
 				    <source type="video/youtube" src="http://www.youtube.com/watch?v=BBAtAM7vtgc" />
 				</video>
 			</article>
-			<article id='bob'>
-				<div id="mouth"></div>
-				<div id="chin"></div>
-				<div id="hand"></div>
+			<article id='bob' class='bob-ross'>
+				<div id="mouth" class='mouth'></div>
+				<div id="brush" class='brush'></div>
 			</article>
 		</section>
 		<footer>
 			<p>copyright &copy; 2013 <a href="#">C</a>+<a href="#">C</a></p>
 		</footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-		<script src="js/vendor/mediaelement/mediaelement-and-player.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-		<script src="//code.createjs.com/createjs-2013.09.25.min.js"></script>	
+		<script src="js/vendor/mediaelement/mediaelement-and-player.min.js"></script>
+		<script src="js/vendor/createjs-2013.09.25.min.js"></script>	
         <script src="js/plugins.js"></script>
 <?php include 'includes/_jslib.php'; 
 writeJSLib('js/yeezypainter/');

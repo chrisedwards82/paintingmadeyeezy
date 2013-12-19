@@ -54,6 +54,10 @@ this.yeezypainter = this.yeezypainter || {};
 			this.media.addEventListener('timeupdate',createjs.proxy(this.checkTime,this));	
 		};
 		
+		this.onVideoError = function(evt){
+			console.log('onVideoError',evt);
+		}
+		
 		this.start = function(event){
 			this.bob.talk(phrases[0]);
 			this.media.setVolume(0);

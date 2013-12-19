@@ -35,7 +35,6 @@ header {
 	height: 100%;
 	max-width: 800px;
 	background-color: black;
-	
 	#bob{
 		width: 100%;
 		height: 100%;
@@ -43,17 +42,40 @@ header {
 		z-index:8;
 		background-image: url('../img/bob_bg.png');
 		background-repeat: no-repeat;
-		background-position: top right;
+		background-position: top left;
 		background-size: 100% auto;
+		//1266x1482
+		.mouth{
+			background-image: url('../img/bob_mouth.png');
+		}
+		.brush{
+			background-image: url('../img/bob_brush_a.png');
+			&.b{
+				background-image: url('../img/bob_brush_b.png');
+			}
+		}
+		.mouth, .brush{
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index:9;
+		}
+	
 	}
 	#video{
 		position: absolute;
 		top:12%;
 		width: 90%;
-		height: 90%;
+		height: 80%;
 		background-color: #000;
 		z-index:7;
-	
+		overflow: hidden;
+		
 
 	}
 }
@@ -101,6 +123,13 @@ footer {
 	#main {
 		background-color: #0f0;
 	}
+}
+
+.mejs-layers, .mejs-controls{
+	display: none;
+}
+audio{
+	display: none;
 }
 
 @import '_sharelinks';

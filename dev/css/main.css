@@ -162,7 +162,7 @@ header h1 {
   max-width: 800px;
   background-color: black;
 }
-/* line 39, ../sass/main.scss */
+/* line 38, ../sass/main.scss */
 #main #bob {
   width: 100%;
   height: 100%;
@@ -170,20 +170,45 @@ header h1 {
   z-index: 8;
   background-image: url("../img/bob_bg.png");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: top left;
   background-size: 100% auto;
 }
-/* line 49, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
+#main #bob .mouth {
+  background-image: url("../img/bob_mouth.png");
+}
+/* line 51, ../sass/main.scss */
+#main #bob .brush {
+  background-image: url("../img/bob_brush_a.png");
+}
+/* line 53, ../sass/main.scss */
+#main #bob .brush.b {
+  background-image: url("../img/bob_brush_b.png");
+}
+/* line 57, ../sass/main.scss */
+#main #bob .mouth, #main #bob .brush {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+/* line 70, ../sass/main.scss */
 #main #video {
   position: absolute;
   top: 12%;
   width: 90%;
-  height: 90%;
+  height: 80%;
   background-color: #000;
   z-index: 7;
+  overflow: hidden;
 }
 
-/* line 63, ../sass/main.scss */
+/* line 85, ../sass/main.scss */
 footer {
   width: 100%;
   color: #fff;
@@ -196,23 +221,23 @@ footer {
   text-transform: uppercase;
   z-index: 9;
 }
-/* line 75, ../sass/main.scss */
+/* line 97, ../sass/main.scss */
 footer p a, footer p a:link, footer p a:active, footer p a:visited, footer p a:hover {
   color: #fff;
   text-decoration: none;
 }
-/* line 79, ../sass/main.scss */
+/* line 101, ../sass/main.scss */
 footer p a:hover {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 88, ../sass/main.scss */
+  /* line 110, ../sass/main.scss */
   body {
     overflow: hidden;
   }
 
-  /* line 91, ../sass/main.scss */
+  /* line 113, ../sass/main.scss */
   #main {
     background-color: #f00;
     width: 600px;
@@ -222,11 +247,21 @@ footer p a:hover {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 101, ../sass/main.scss */
+  /* line 123, ../sass/main.scss */
   #main {
     background-color: #0f0;
   }
 }
+/* line 128, ../sass/main.scss */
+.mejs-layers, .mejs-controls {
+  display: none;
+}
+
+/* line 131, ../sass/main.scss */
+audio {
+  display: none;
+}
+
 /* line 1, ../sass/_sharelinks.scss */
 ul.share-links {
   display: block;
