@@ -176,38 +176,45 @@ header {
   padding: 20px;
   float: left;
   z-index: 9;
+  text-align: center;
+  width: 200px;
 }
-/* line 21, ../sass/main.scss */
+/* line 23, ../sass/main.scss */
 header h1 {
+  margin: 0 auto;
   background-color: #fcf;
-  border: 4px solid #000;
+  border: 3px solid #000;
   color: #000;
   text-align: center;
-  padding: .5em 0;
-  font-size: 1.2em;
-  width: 100%;
-  font-family: 'Gotham-Bold';
-  text-transform: uppercase;
-}
-/* line 31, ../sass/main.scss */
-header h1 span {
-  font-size: 1.25em;
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  letter-spacing: .5em;
+  width: 123px;
+  height: 122px;
+  text-indent: -9999em;
+  background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+  background-size: 90% auto;
+  background-position: center center;
 }
 /* line 38, ../sass/main.scss */
-header h1 em {
+header .controls li {
   display: block;
-  font-family: "GrandHotel-Regular";
-  font-size: 2.5em;
-  text-transform: lowercase;
-  margin-top: -.25em;
-  margin-bottom: .25em;
+  width: 123px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Gotham-Medium";
+  font-size: .8em;
+  line-height: .8em;
+  padding: .65em 0;
+  border: 3px solid #000;
+  margin: 1em auto;
+  cursor: pointer;
+}
+/* line 50, ../sass/main.scss */
+header .controls li:hover {
+  border: 3px solid #fff;
+  color: #fff;
 }
 
-/* line 50, ../sass/main.scss */
+/* line 60, ../sass/main.scss */
 #main {
   position: absolute;
   top: 0;
@@ -217,7 +224,7 @@ header h1 em {
   max-width: 800px;
   background-color: black;
 }
-/* line 58, ../sass/main.scss */
+/* line 68, ../sass/main.scss */
 #main #bob {
   width: 100%;
   height: 100%;
@@ -228,19 +235,19 @@ header h1 em {
   background-position: top left;
   background-size: 100% auto;
 }
-/* line 68, ../sass/main.scss */
+/* line 78, ../sass/main.scss */
 #main #bob .mouth {
   background-image: url("../img/bob_mouth.png");
 }
-/* line 71, ../sass/main.scss */
+/* line 81, ../sass/main.scss */
 #main #bob .brush {
   background-image: url("../img/bob_brush_a.png");
 }
-/* line 73, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 #main #bob .brush.b {
   background-image: url("../img/bob_brush_b.png");
 }
-/* line 77, ../sass/main.scss */
+/* line 87, ../sass/main.scss */
 #main #bob .mouth, #main #bob .brush {
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -252,7 +259,7 @@ header h1 em {
   left: 0;
   z-index: 9;
 }
-/* line 90, ../sass/main.scss */
+/* line 100, ../sass/main.scss */
 #main #video {
   position: absolute;
   top: 12%;
@@ -263,7 +270,7 @@ header h1 em {
   overflow: hidden;
 }
 
-/* line 105, ../sass/main.scss */
+/* line 115, ../sass/main.scss */
 footer {
   width: 100%;
   color: #fff;
@@ -276,23 +283,23 @@ footer {
   text-transform: uppercase;
   z-index: 9;
 }
-/* line 117, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 footer p a, footer p a:link, footer p a:active, footer p a:visited, footer p a:hover {
   color: #fff;
   text-decoration: none;
 }
-/* line 121, ../sass/main.scss */
+/* line 131, ../sass/main.scss */
 footer p a:hover {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 130, ../sass/main.scss */
+  /* line 140, ../sass/main.scss */
   body {
     overflow: hidden;
   }
 
-  /* line 133, ../sass/main.scss */
+  /* line 143, ../sass/main.scss */
   #main {
     background-color: #f00;
     width: 600px;
@@ -302,17 +309,17 @@ footer p a:hover {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 143, ../sass/main.scss */
+  /* line 153, ../sass/main.scss */
   #main {
     background-color: #0f0;
   }
 }
-/* line 148, ../sass/main.scss */
+/* line 158, ../sass/main.scss */
 .mejs-layers, .mejs-controls {
   display: none;
 }
 
-/* line 151, ../sass/main.scss */
+/* line 161, ../sass/main.scss */
 audio {
   display: none;
 }
@@ -320,52 +327,62 @@ audio {
 /* line 1, ../sass/_sharelinks.scss */
 ul.share-links {
   display: block;
+  width: 123px;
   margin: 0 auto;
+  text-align: left;
 }
-/* line 4, ../sass/_sharelinks.scss */
+/* line 6, ../sass/_sharelinks.scss */
 ul.share-links li {
   display: inline-block;
-  margin: 0;
-  margin-right: 5px;
+  width: 30%;
+  margin-right: 5%;
 }
-/* line 8, ../sass/_sharelinks.scss */
+/* line 10, ../sass/_sharelinks.scss */
 ul.share-links li .li-text {
   display: none;
 }
 /* line 12, ../sass/_sharelinks.scss */
 ul.share-links li a {
-  background-color: #ea756e;
+  border: 3px solid #000;
+  background-color: #fcf;
   display: block;
-  width: 40px;
+  width: 90%;
   height: 40px;
   text-indent: -9999em;
   cursor: pointer;
   background-image: url("../img/social-sprite.png");
   background-repeat: no-repeat;
-  border-radius: 20px;
 }
-/* line 25, ../sass/_sharelinks.scss */
+/* line 23, ../sass/_sharelinks.scss */
+ul.share-links li a:hover {
+  border: 3px solid #fff;
+}
+/* line 26, ../sass/_sharelinks.scss */
 ul.share-links li .a-facebook {
-  background-position: -99px -98px;
+  background-position: 10px 6px;
 }
 /* line 28, ../sass/_sharelinks.scss */
+ul.share-links li .a-facebook:hover {
+  background-position: -240px 6px;
+}
+/* line 33, ../sass/_sharelinks.scss */
 ul.share-links li .a-twitter {
-  background-position: -238px -145px;
+  background-position: -71px 6px;
 }
-/* line 31, ../sass/_sharelinks.scss */
-ul.share-links li .a-google {
-  background-position: -238px -192px;
-}
-/* line 34, ../sass/_sharelinks.scss */
-ul.share-links li .a-tumblr {
-  background-position: -52px -100px;
-}
-/* line 37, ../sass/_sharelinks.scss */
-ul.share-links li .a-email {
-  background-position: -193px -4px;
+/* line 35, ../sass/_sharelinks.scss */
+ul.share-links li .a-twitter:hover {
+  background-position: -321px 6px;
 }
 /* line 41, ../sass/_sharelinks.scss */
-ul.share-links li.last {
+ul.share-links li .a-email {
+  background-position: -150px 6px;
+}
+/* line 43, ../sass/_sharelinks.scss */
+ul.share-links li .a-email:hover {
+  background-position: -400px 6px;
+}
+/* line 51, ../sass/_sharelinks.scss */
+ul.share-links li:last-child {
   margin-right: 0;
 }
 

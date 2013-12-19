@@ -1,46 +1,55 @@
 ul.share-links {
 	display: block;
+	width: 123px;
 	margin: 0 auto;
+	text-align: left;
 	li{
 		display: inline-block;
-		margin: 0;
-		margin-right: 5px;
-		.li-text {
-			display: none;
-		}
+		width: 30%;
+		margin-right: 5%;
+		.li-text {display: none;}
 			
 		a{	
-			background-color: #ea756e;
+			border: 3px solid #000;
+			background-color: #fcf;
 			display: block;
-			width: 40px;
+			width: 90%;
 			height: 40px;
 			text-indent: -9999em;
 			cursor: pointer;
 			background-image: url('../img/social-sprite.png');
 			background-repeat: no-repeat;
-			border-radius: 20px;
 		}
-		.a-email {
+		a:hover {
+			border: 3px solid #fff;
 		}
 		.a-facebook {
-			background-position: -99px -98px;
+			background-position: 10px 6px;
+			&:hover{
+				background-position: -240px 6px;
+				
+			}
 		}
 		.a-twitter{
-			background-position: -238px -145px;
-		}
-		.a-google{
-			background-position: -238px -192px;
-		}
-		.a-tumblr{
-			background-position: -52px -100px;
-		}
-		.a-email{
-			background-position: -193px -4px;
+			background-position: -71px 6px;
+			&:hover{
+				background-position: -321px 6px;
+				
+			}
 		}
 		
-		&.last{
-			margin-right: 0;
+		.a-email{
+			background-position: -150px 6px;
+			&:hover{
+				background-position: -400px 6px;
+
+			}
 		}
+		
+	
+	}
+	li:last-child{
+		margin-right: 0;
 	}
 	
 	
