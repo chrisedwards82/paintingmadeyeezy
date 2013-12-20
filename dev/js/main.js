@@ -71,7 +71,10 @@ $(document).ready(function(){
 	test_sound = phrases[7];
 	app = new yeezypainter.YeezyPainter(phrases,cuePoints);
 	app.addEventListener(yeezypainter.YeezyPainter.ASSETS_LOADED,createjs.proxy(app.initVideoPlayer,app));
-	//app.addEventListener(yeezypainter.YeezyPainter.VIDEO_READY,createjs.proxy(app.start,app));
+	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_READY,function(){
+		app.media.setVolume(.15);
+		app.start();
+	});
 	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_ENDED,function(){
 		//show/hide buttons here
 		$('.replay').click(function(){
@@ -85,7 +88,14 @@ $(document).ready(function(){
 		});
 	});
 	$(app.bob.container).click(function(){
-		app.stop();		
+		if($(this).attr('data-paused')=='1'){
+			app.start();
+			$(this).attr('data-paused','0');
+					
+		}else{
+			$(this).attr('data-paused','1');
+			app.stop();		
+		}
 	});
 	app.loadAssets();
 });

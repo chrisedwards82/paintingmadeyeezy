@@ -62,7 +62,7 @@ this.yeezypainter = this.yeezypainter || {};
 		
 		this.start = function(event){
 			this.bob.talk(phrases[0]);
-			this.media.setVolume(0);
+			//this.media.setVolume(0);
 			this.media.play();
 		};
 		this.checkTime = function(event){
