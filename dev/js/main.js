@@ -68,7 +68,7 @@ $(document).ready(function(){
 		'bush',
 		'yellowochre'
 	];
-	test_sound = phrases[0];
+	test_sound = phrases[7];
 	app = new yeezypainter.YeezyPainter(phrases,cuePoints);
 	app.addEventListener(yeezypainter.YeezyPainter.ASSETS_LOADED,createjs.proxy(app.initVideoPlayer,app));
 	//app.addEventListener(yeezypainter.YeezyPainter.VIDEO_READY,createjs.proxy(app.start,app));

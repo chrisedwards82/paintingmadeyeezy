@@ -15,8 +15,35 @@ this.yeezypainter = this.yeezypainter || {};
 	var p = Bob.prototype;
 	p.talk = function(phrase){
 		switch(phrase){
+			case 'letsdoit':
+				this.mouth.animate({top:'3%'},200).animate({top:0},100).animate({top:'3%'},100).animate({top:0},100);				
+			break;
+			case 'asyouwant':
+			case 'cloud':
+				this.mouth.animate({top:'3%'},200).animate({top:0},100).animate({top:'3%'},100).animate({top:0},100).animate(
+				{top:'2%'},100).animate({top:'3%'},100).animate({top:0},100).animate(
+					{top:'2%'},100).animate({top:'3%'},100).animate({top:0},100).animate(
+						{top:'2%'},100).animate({top:'3%'},200).animate({top:0},100);
+			break;
+			case "tree":
+				this.mouth.animate({top:'3%'},200).animate({top:'1%'},100).animate({top:'3%'},100).animate({top:0},100).animate(
+					{top:'3%'},200).animate({top:'1%'},100).animate({top:'3%'},100).animate({top:0},100).animate(
+						{top:'1%'},100).animate({top:'3%'},100).animate({top:0},100);
+			break;
+			case 'knife':
+				this.mouth.animate({top:'3%'},200).animate({top:'1%'},100).animate({top:'3%'},100).animate({top:0},100).animate(
+					{top:'3%'},100).animate({top:0},100);
+			break;
+			case 'littlepaint':
+			case 'yellowochre':
+				this.mouth.animate({top:'3%'},200).animate({top:'1%'},100).animate({top:'3%'},100).animate(
+				{top:0},100).animate({top:'3%'},200).animate({top:'1%'},100).animate(
+					{top:'3%'},100).animate({top:0},100).animate({top:'3%'},100).animate({top:0},100);
+			break;
+			break;
 			default:
-			//	console.log(phrase);
+				this.mouth.animate({top:'3%'},200).animate({top:'1%'},100).animate({top:'3%'},100).animate(
+					{top:0},100).animate({top:'3%'},200).animate({top:'1%'},100).animate({top:'3%'},100).animate({top:0},100);
 			break;
 			
 		}
@@ -28,39 +55,3 @@ this.yeezypainter = this.yeezypainter || {};
 	yeezypainter.Bob = Bob;
 }());
 
-/*
-case "tree":
-	this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100).animate(
-		{top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100).animate(
-			{top:171},100).animate({top:175},100).animate({top:167},100);
-	
-break;
-case 'knife':
-	this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100).animate(
-		{top:175},100).animate({top:167},100);
-	
-break;
-case 'asyouwant':
-
-case 'cloud':
-	this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100).animate(
-		{top:171},100).animate({top:175},100).animate({top:167},100).animate(
-			{top:171},100).animate({top:175},100).animate({top:167},100).animate(
-				{top:171},100).animate({top:175},100).animate({top:167},100);
-	
-break;
-case 'letsdoit':
-	this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100);				
-break;
-case 'littlepaint':
-case 'yellowochre':
-	this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate(
-	{top:167},100).animate({top:174},200).animate({top:171},100).animate(
-		{top:175},100).animate({top:167},100).animate({top:175},100).animate({top:167},100);
-break;
-
-default:
-	this.chin.animate({top:174},200).animate({top:171},100).animate({top:175},100).animate(
-	{top:167},100).animate({top:174},200).animate({top:171},100).animate({top:175},100).animate({top:167},100);
-break;
-*/
