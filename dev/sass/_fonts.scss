@@ -8,31 +8,40 @@
 	font-weight:normal;
 	font-style:normal;
 }
+
 @font-face {
-	font-family:"Gotham-Medium";
-	src:url("../fonts/gotham-medium.otf") format("otf"),
-		url("../fonts/gotham-medium.ttf") format("truetype");
+	font-family:"GothamMedium";
+	src:url("../fonts/gotham-medium-webfont.eot");
+	src:url("../fonts/gotham-medium-webfont.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/gotham-medium-webfont.woff") format("woff"),
+		url("../fonts/gotham-medium-webfont.ttf") format("truetype"),
+		url("../fonts/gotham-medium-webfont.svg#GothamBold") format("svg"),
+		url("../fonts/gotham-medium-webfont.otf") format("otf");
 	font-weight:normal;
 	font-style:normal;
 }
+/* --- not used but lets keep these around, just in case
+
 @font-face {
-	font-family:"Gotham-Bold";
-	src:url("../fonts/gotham-bold.otf") format("otf"),
-		url("../fonts/gotham-bold.ttf") format("truetype");
+	font-family:"GothamBold";
+	src:url("../fonts/gotham-bold-webfont.eot");
+	src:url("../fonts/gotham-bold-webfont.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/gotham-bold-webfont.woff") format("woff"),
+		url("../fonts/gotham-bold-webfont.ttf") format("truetype"),
+		url("../fonts/gotham-bold-webfont.svg#GothamBold") format("svg"),
+		url("../fonts/gotham-bold-webfont.otf") format("otf");
 	font-weight:bold;
 	font-style:normal;
 }
-
-//TODO need other fallbacks
-/*
 @font-face {
-	font-family:"VerizonApexBook";
-	src:url("..fonts/verizonApex-book-sq.eot");
-	src:url("../fonts/verizonApex-book-sq.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/verizonApex-book-ex.woff") format("woff"),
-		url("../fonts/verizonApex-book-sq.ttf") format("truetype"),
-		url("../fonts/verizonApex-book-ex.svg#VerizonApexBook") format("svg");
+	font-family:"GrandHotelRegular";
+	src:url("../fonts/grandhotel-regular-webfont.eot");
+	src:url("../fonts/grandhotel-regular-webfont.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/grandhotel-regular-webfont.woff") format("woff"),
+		url("../fonts/grandhotel-regular-webfont.ttf") format("truetype"),
+		url("../fonts/grandhotel-regular-webfont.svg#GothamBold") format("svg"),
+		url("../fonts/grandhotel-regular-webfont.otf") format("otf");
 	font-weight:normal;
 	font-style:normal;
 }
-*/
+//*/

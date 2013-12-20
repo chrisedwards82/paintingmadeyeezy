@@ -40,7 +40,7 @@ header {
 			width: 123px;
 			text-align: center;
 			text-transform: uppercase;
-			font-family: "Gotham-Medium";
+			font-family: "GothamMedium";
 			font-size: .8em;
 			line-height: .8em;
 			padding:.65em 0;
@@ -124,6 +124,7 @@ footer {
 	text-align: center;
 	text-transform: uppercase;
 	z-index: 9;
+	font-family:"GothamMedium";
 	p{
 		a, a:link, a:active, a:visited, a:hover{
 			color: #fff;
