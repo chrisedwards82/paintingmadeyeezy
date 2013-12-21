@@ -23,14 +23,14 @@
 
         <header class="clearfix">
 			<h1>Painting <span>made</span> <em>Yeezy</em></h1>
-			<nav>
-				<ul class="controls">
+			<nav class="clearfix">
+				<ul class="controls clearfix">
 					<!--li class='talk'>Make Bob Talk</li-->
 					<li class='replay disabled'>Replay Video</li>
 					<li class='pause disabled'>Pause Video</li>
 					<li class='resume disabled'>Resume Video</li>
 				</ul>
-				<ul class='share-links'></ul>
+				<ul class='share-links clearfix'></ul>
 			</nav>
 		</header>
 		<section id="main">

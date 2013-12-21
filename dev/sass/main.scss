@@ -17,56 +17,8 @@ body, html {
 		overflow:hidden;
 	}
 }
+@import 'nav';
 
-header {
-	float: left;
-	z-index:9;
-	text-align: center;
-	padding: 1em;
-	margin-left: 1em;
-	border: 1px solid #f00;
-	h1{
-		margin: 0 auto;
-		background-color: #fcf;
-		border: 3px solid #000;
-		color: #000;
-		text-align: center;
-		width: 123px;
-		height: 122px;
-		text-indent: -9999em;
-		background-image: url('../img/header.png');
-		background-repeat: no-repeat;
-		background-size: 90% auto;
-		background-position: center center;
-	}
-	nav{
-		
-		padding: 0;
-		.controls {
-			li {
-				display: block;
-				width: 123px;
-				text-align: center;
-				text-transform: uppercase;
-				font-family: "GothamBold";
-				font-size: .8em;
-				line-height: .8em;
-				padding:.65em 0;
-				border: 3px solid #000;
-				margin: 1em auto;
-				cursor: pointer;
-				&:hover{
-					border: 3px solid #fff;
-					color: #fff;
-				}
-				&.disabled{
-					cursor: default;
-				//	display: none;
-				}
-			}		
-		}
-	}
-}
 
 #main{
 	position:absolute;
@@ -154,7 +106,6 @@ footer {
 	}
 	#main {
 		width: 75%;
-		
 		background-color: #f00;
 		//width: 600px;
 		//height: 600px;
@@ -176,7 +127,6 @@ audio{
 	display: none;
 }
 
-@import '_sharelinks';
 
 /* ==========================================================================
    End author's custom styles
