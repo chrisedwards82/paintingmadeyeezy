@@ -1,26 +1,6 @@
 //http://compass-style.org/reference/compass/css3/font_face/
 @import "compass/css3/font-face";
 
-@font-face {
-	font-family:"GrandHotel-Regular";
-	src:url("../fonts/grandhotel-regular.otf") format("otf"),
-		url("../fonts/grandhotel-regular.ttf") format("truetype");
-	font-weight:normal;
-	font-style:normal;
-}
-
-@font-face {
-	font-family:"GothamMedium";
-	src:url("../fonts/gotham-medium-webfont.eot");
-	src:url("../fonts/gotham-medium-webfont.eot?#iefix") format("embedded-opentype"),
-		url("../fonts/gotham-medium-webfont.woff") format("woff"),
-		url("../fonts/gotham-medium-webfont.ttf") format("truetype"),
-		url("../fonts/gotham-medium-webfont.svg#GothamBold") format("svg"),
-		url("../fonts/gotham-medium-webfont.otf") format("otf");
-	font-weight:normal;
-	font-style:normal;
-}
-/* --- not used but lets keep these around, just in case
 
 @font-face {
 	font-family:"GothamBold";
@@ -31,6 +11,20 @@
 		url("../fonts/gotham-bold-webfont.svg#GothamBold") format("svg"),
 		url("../fonts/gotham-bold-webfont.otf") format("otf");
 	font-weight:bold;
+	font-style:normal;
+}
+
+/* --- not used but lets keep these around, just in case fontsquirrel.com
+
+@font-face {
+	font-family:"GothamMedium";
+	src:url("../fonts/gotham-medium-webfont.eot");
+	src:url("../fonts/gotham-medium-webfont.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/gotham-medium-webfont.woff") format("woff"),
+		url("../fonts/gotham-medium-webfont.ttf") format("truetype"),
+		url("../fonts/gotham-medium-webfont.svg#GothamMedium") format("svg"),
+		url("../fonts/gotham-medium-webfont.otf") format("otf");
+	font-weight:normal;
 	font-style:normal;
 }
 @font-face {
