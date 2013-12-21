@@ -1,0 +1,101 @@
+header {
+	float: left;
+	z-index:9;
+	text-align: center;
+	padding: 1em;
+	margin-left: 1em;
+	border: 1px solid #f00;
+	h1{
+		margin: 0 auto .5em;
+		background-color: #fcf;
+		border: 3px solid #000;
+		color: #000;
+		text-align: center;
+		width: 123px;
+		height: 122px;
+		text-indent: -9999em;
+		background-image: url('../img/header.png');
+		background-repeat: no-repeat;
+		background-size: 90% auto;
+		background-position: center center;
+	}
+	nav{	
+		padding: 0;
+		.controls {
+			li {
+				display: block;
+				width: 123px;
+				text-align: center;
+				text-transform: uppercase;
+				font-family: "GothamBold";
+				font-size: .8em;
+				line-height: .8em;
+				padding:.65em 0;
+				border: 3px solid #000;
+				margin: 0 auto .5em;
+				cursor: pointer;
+				&:hover{
+					border: 3px solid #fff;
+					color: #fff;
+				}
+				&.disabled{
+					cursor: default;
+					display: none;
+				}
+			}		
+		}
+		.share-links {
+			display: block;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			width: 126px;
+			li{
+				display: block;
+				float: left;
+				width: 30%;
+				margin: 0;
+				margin-right: 5%;
+				.li-text {display: none;}
+
+				a{	
+					display: block;
+					padding: 0;
+					margin: 0;
+					border: 3px solid #000;
+					background-color: #fcf;
+					width: 90%;
+					height: 40px;
+					text-indent: -9999em;
+					cursor: pointer;
+					background-image: url('../img/social-sprite.png');
+					background-repeat: no-repeat;
+				}
+				a:hover {
+					border: 3px solid #fff;
+				}
+				.a-facebook {
+					background-position: 10px 6px;
+					&:hover{
+						background-position: -240px 6px;	
+					}
+				}
+				.a-twitter{
+					background-position: -71px 6px;
+					&:hover{
+						background-position: -321px 6px;
+					}
+				}
+				.a-email{
+					background-position: -150px 6px;
+					&:hover{
+						background-position: -400px 6px;
+					}
+				}
+				&:last-child{
+					margin-right: 0;
+				};
+			}	
+		}
+	}
+}
