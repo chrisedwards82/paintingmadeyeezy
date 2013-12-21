@@ -26,6 +26,7 @@
 			<nav class="clearfix">
 				<ul class="controls clearfix">
 					<!--li class='talk'>Make Bob Talk</li-->
+					<li class='talk'>Talk 2 Me, Bob</li>
 					<li class='replay disabled'>Replay Video</li>
 					<li class='pause disabled'>Pause Video</li>
 					<li class='resume disabled'>Resume Video</li>

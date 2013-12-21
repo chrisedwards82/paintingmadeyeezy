@@ -200,6 +200,7 @@ header nav .controls li:hover {
 /* line 41, ../sass/_nav.scss */
 header nav .controls li.disabled {
   cursor: default;
+  display: none;
 }
 /* line 47, ../sass/_nav.scss */
 header nav .share-links {

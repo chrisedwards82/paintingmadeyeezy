@@ -73,6 +73,9 @@ $(document).ready(function(){
 	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_READY,function(){
 		app.media.setVolume(.15);
 		app.start();
+		$('.controls>li').addClass('disabled');
+		$('.pause').removeClass('disabled');
+		
 	});
 	//intro ui and initialize video player, video will start on player intialized
 	app.addEventListener(yeezypainter.YeezyPainter.ASSETS_LOADED,function(){
@@ -86,30 +89,27 @@ $(document).ready(function(){
 		$('#main').animate({right:0},500,function(){
 			app.initVideoPlayer();
 			$('#main').attr('style','display: block;')
-			$('body').removeClass('intro');
-			
+			$('body').removeClass('intro');	
 		});
 	});
 	//
 	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_ENDED,function(){
 		//show/hide buttons here
-		$('.replay').click(function(){
-			app.start();
-		});
+		$('.controls>li').addClass('disabled');
+		$('.replay').removeClass('disabled');
 	});
-	
-	
-	
-	$(app.bob.container).click(function(){
-		if($(this).attr('data-paused')=='1'){
-			app.start();
-			$(this).attr('data-paused','0');
-					
-		}else{
-			$(this).attr('data-paused','1');
-			app.stop();		
-		}
+	$('.replay').click(function(){
+		app.start();
 	});
-	
+	$('.pause').click(function(){
+		app.pause();
+		$(this).addClass('.disabled');
+		$('.resume').removeClass('.disabled');	
+	});
+	$('.resume').click(function(){
+		app.resume();
+		$(this).addClass('.disabled');
+		$('.pause').removeClass('.disabled');
+	});
 	app.loadAssets();
 });
