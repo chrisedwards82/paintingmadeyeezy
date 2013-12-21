@@ -52,6 +52,7 @@
 		<!--script src="js/vendor/createjs-2013.09.25.min.js"></script-->	
 		<script src="http://code.createjs.com/soundjs-0.5.2.min.js"></script>
 		<script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
+		<script>window.createjs || document.write('<script src="js/vendor/createjs-2013.09.25.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
 <?php include 'includes/_jslib.php'; 
 writeJSLib('js/yeezypainter/');
