@@ -68,9 +68,11 @@ $(document).ready(function(){
 		'bush',
 		'yellowochre'
 	];
+	$('#main').hide();
 	test_sound = phrases[7];
 	app = new yeezypainter.YeezyPainter(phrases,cuePoints);
-	app.addEventListener(yeezypainter.YeezyPainter.ASSETS_LOADED,createjs.proxy(app.initVideoPlayer,app));
+	//app.addEventListener(yeezypainter.YeezyPainter.ASSETS_LOADED,createjs.proxy(app.initVideoPlayer,app));
+
 	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_READY,function(){
 		app.media.setVolume(.15);
 		app.start();
@@ -85,6 +87,14 @@ $(document).ready(function(){
 		//show/hide buttons here
 		$('.talk').click(function(){
 			app.bob.talk(test_sound);
+		});
+		$('body').addClass('intro');
+		$('#main').css({right:'-100%'});
+		$('#main').show();
+		
+		$('#main').animate({right:0},500,function(){
+			app.initVideoPlayer();
+			$('body').removeClass('intro');
 		});
 	});
 	$(app.bob.container).click(function(){
