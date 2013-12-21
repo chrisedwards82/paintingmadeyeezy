@@ -67,22 +67,14 @@ $(document).ready(function(){
 		'verythick',
 		'bush',
 		'yellowochre'
-	];
-	$('#main').hide();
+	];	
 	test_sound = phrases[7];
 	app = new yeezypainter.YeezyPainter(phrases,cuePoints);
-	//app.addEventListener(yeezypainter.YeezyPainter.ASSETS_LOADED,createjs.proxy(app.initVideoPlayer,app));
-
 	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_READY,function(){
 		app.media.setVolume(.15);
 		app.start();
 	});
-	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_ENDED,function(){
-		//show/hide buttons here
-		$('.replay').click(function(){
-			app.start();
-		});
-	});
+	//intro ui and initialize video player, video will start on player intialized
 	app.addEventListener(yeezypainter.YeezyPainter.ASSETS_LOADED,function(){
 		//show/hide buttons here
 		$('.talk').click(function(){
@@ -91,12 +83,23 @@ $(document).ready(function(){
 		$('body').addClass('intro');
 		$('#main').css({right:'-100%'});
 		$('#main').show();
-		
 		$('#main').animate({right:0},500,function(){
 			app.initVideoPlayer();
+			$('#main').attr('style','display: block;')
 			$('body').removeClass('intro');
+			
 		});
 	});
+	//
+	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_ENDED,function(){
+		//show/hide buttons here
+		$('.replay').click(function(){
+			app.start();
+		});
+	});
+	
+	
+	
 	$(app.bob.container).click(function(){
 		if($(this).attr('data-paused')=='1'){
 			app.start();
@@ -107,5 +110,6 @@ $(document).ready(function(){
 			app.stop();		
 		}
 	});
+	
 	app.loadAssets();
 });

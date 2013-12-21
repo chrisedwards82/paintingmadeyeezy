@@ -2,18 +2,23 @@ ul.share-links {
 	display: block;
 	width: 123px;
 	margin: 0 auto;
+	padding: 0;
 	text-align: left;
 	li{
-		display: inline-block;
+		display: block;
+		float: left;
 		width: 30%;
+		margin: 0;
 		margin-right: 5%;
 		.li-text {display: none;}
 			
 		a{	
+			padding: 0;
+			margin: 0;
 			border: 3px solid #000;
 			background-color: #fcf;
 			display: block;
-			width: 90%;
+			width: 95%;
 			height: 40px;
 			text-indent: -9999em;
 			cursor: pointer;

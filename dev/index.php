@@ -21,12 +21,14 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <header>
+        <header class="clearfix">
 			<h1>Painting <span>made</span> <em>Yeezy</em></h1>
 			<nav>
 				<ul class="controls">
-					<li class='talk'>Make Bob Talk</li>
-					<li class='replay'>Replay Video</li>
+					<!--li class='talk'>Make Bob Talk</li-->
+					<li class='replay disabled'>Replay Video</li>
+					<li class='pause disabled'>Pause Video</li>
+					<li class='resume disabled'>Resume Video</li>
 				</ul>
 				<ul class='share-links'></ul>
 			</nav>
