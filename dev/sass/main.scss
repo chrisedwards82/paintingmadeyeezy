@@ -138,16 +138,18 @@ footer {
 }
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 760px){
 	body{
 		overflow: hidden;
 	}
 	#main {
+		width: 75%;
+		
 		background-color: #f00;
-		width: 600px;
-		height: 600px;
-		position: relative;
-		float: right;
+		//width: 600px;
+		//height: 600px;
+		//position: relative;
+		//float: right;
 	}
 }
 

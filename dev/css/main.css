@@ -270,7 +270,7 @@ footer p a:hover {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 760px) {
   /* line 142, ../sass/main.scss */
   body {
     overflow: hidden;
@@ -278,25 +278,22 @@ footer p a:hover {
 
   /* line 145, ../sass/main.scss */
   #main {
+    width: 75%;
     background-color: #f00;
-    width: 600px;
-    height: 600px;
-    position: relative;
-    float: right;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 155, ../sass/main.scss */
+  /* line 157, ../sass/main.scss */
   #main {
     background-color: #0f0;
   }
 }
-/* line 160, ../sass/main.scss */
+/* line 162, ../sass/main.scss */
 .mejs-layers, .mejs-controls {
   display: none;
 }
 
-/* line 163, ../sass/main.scss */
+/* line 165, ../sass/main.scss */
 audio {
   display: none;
 }
