@@ -251,7 +251,7 @@ header .controls li:hover {
   overflow: hidden;
 }
 
-/* line 121, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 footer {
   width: 100%;
   color: #fff;
@@ -265,40 +265,40 @@ footer {
   z-index: 9;
   font-family: "GothamBold";
 }
-/* line 134, ../sass/main.scss */
+/* line 132, ../sass/main.scss */
 footer p a, footer p a:link, footer p a:active, footer p a:visited, footer p a:hover {
   color: #fff;
   text-decoration: none;
 }
-/* line 138, ../sass/main.scss */
+/* line 136, ../sass/main.scss */
 footer p a:hover {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 760px) {
-  /* line 147, ../sass/main.scss */
+  /* line 145, ../sass/main.scss */
   body {
     overflow: hidden;
   }
 
-  /* line 150, ../sass/main.scss */
+  /* line 148, ../sass/main.scss */
   #main {
     width: 75%;
     background-color: #f00;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 162, ../sass/main.scss */
+  /* line 160, ../sass/main.scss */
   #main {
     background-color: #0f0;
   }
 }
-/* line 167, ../sass/main.scss */
+/* line 165, ../sass/main.scss */
 .mejs-layers, .mejs-controls {
   display: none;
 }
 
-/* line 170, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 audio {
   display: none;
 }
