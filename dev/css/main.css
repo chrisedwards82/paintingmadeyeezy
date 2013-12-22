@@ -157,9 +157,8 @@ header {
   text-align: center;
   padding: 1em;
   margin-left: 1em;
-  border: 1px solid #f00;
 }
-/* line 8, ../sass/_nav.scss */
+/* line 7, ../sass/_nav.scss */
 header h1 {
   margin: 0 auto .5em;
   background-color: #fcf;
@@ -174,11 +173,11 @@ header h1 {
   background-size: 90% auto;
   background-position: center center;
 }
-/* line 22, ../sass/_nav.scss */
+/* line 21, ../sass/_nav.scss */
 header nav {
   padding: 0;
 }
-/* line 25, ../sass/_nav.scss */
+/* line 24, ../sass/_nav.scss */
 header nav .controls li {
   display: block;
   width: 123px;
@@ -192,17 +191,17 @@ header nav .controls li {
   margin: 0 auto .5em;
   cursor: pointer;
 }
-/* line 37, ../sass/_nav.scss */
+/* line 36, ../sass/_nav.scss */
 header nav .controls li:hover {
   border: 3px solid #fff;
   color: #fff;
 }
-/* line 41, ../sass/_nav.scss */
+/* line 40, ../sass/_nav.scss */
 header nav .controls li.disabled {
   cursor: default;
   display: none;
 }
-/* line 47, ../sass/_nav.scss */
+/* line 46, ../sass/_nav.scss */
 header nav .share-links {
   display: block;
   margin: 0;
@@ -210,7 +209,7 @@ header nav .share-links {
   text-align: left;
   width: 126px;
 }
-/* line 53, ../sass/_nav.scss */
+/* line 52, ../sass/_nav.scss */
 header nav .share-links li {
   display: block;
   float: left;
@@ -218,11 +217,11 @@ header nav .share-links li {
   margin: 0;
   margin-right: 5%;
 }
-/* line 59, ../sass/_nav.scss */
+/* line 58, ../sass/_nav.scss */
 header nav .share-links li .li-text {
   display: none;
 }
-/* line 61, ../sass/_nav.scss */
+/* line 60, ../sass/_nav.scss */
 header nav .share-links li a {
   display: block;
   padding: 0;
@@ -236,35 +235,35 @@ header nav .share-links li a {
   background-image: url("../img/social-sprite.png");
   background-repeat: no-repeat;
 }
-/* line 74, ../sass/_nav.scss */
+/* line 73, ../sass/_nav.scss */
 header nav .share-links li a:hover {
   border: 3px solid #fff;
 }
-/* line 77, ../sass/_nav.scss */
+/* line 76, ../sass/_nav.scss */
 header nav .share-links li .a-facebook {
   background-position: 10px 6px;
 }
-/* line 79, ../sass/_nav.scss */
+/* line 78, ../sass/_nav.scss */
 header nav .share-links li .a-facebook:hover {
   background-position: -240px 6px;
 }
-/* line 83, ../sass/_nav.scss */
+/* line 82, ../sass/_nav.scss */
 header nav .share-links li .a-twitter {
   background-position: -71px 6px;
 }
-/* line 85, ../sass/_nav.scss */
+/* line 84, ../sass/_nav.scss */
 header nav .share-links li .a-twitter:hover {
   background-position: -321px 6px;
 }
-/* line 89, ../sass/_nav.scss */
+/* line 88, ../sass/_nav.scss */
 header nav .share-links li .a-email {
   background-position: -150px 6px;
 }
-/* line 91, ../sass/_nav.scss */
+/* line 90, ../sass/_nav.scss */
 header nav .share-links li .a-email:hover {
   background-position: -400px 6px;
 }
-/* line 95, ../sass/_nav.scss */
+/* line 94, ../sass/_nav.scss */
 header nav .share-links li:last-child {
   margin-right: 0;
 }

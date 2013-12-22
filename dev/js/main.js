@@ -75,7 +75,6 @@ $(document).ready(function(){
 		app.start();
 		$('.controls>li').addClass('disabled');
 		$('.pause').removeClass('disabled');
-		
 	});
 	//intro ui and initialize video player, video will start on player intialized
 	app.addEventListener(yeezypainter.YeezyPainter.ASSETS_LOADED,function(){
@@ -102,14 +101,14 @@ $(document).ready(function(){
 		app.start();
 	});
 	$('.pause').click(function(){
-		app.pause();
-		$(this).addClass('.disabled');
-		$('.resume').removeClass('.disabled');	
+		$(this).addClass('disabled');
+		$('.resume').removeClass('disabled');
+		app.media.pause();	
 	});
 	$('.resume').click(function(){
-		app.resume();
-		$(this).addClass('.disabled');
-		$('.pause').removeClass('.disabled');
+		$(this).addClass('disabled');
+		$('.pause').removeClass('disabled');
+		app.media.play();
 	});
 	app.loadAssets();
 });
