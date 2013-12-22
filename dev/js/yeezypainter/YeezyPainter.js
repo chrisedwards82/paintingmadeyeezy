@@ -77,6 +77,16 @@ this.yeezypainter = this.yeezypainter || {};
 		this.stop = function(){
 			this.media.stop();
 		}
+		this.resume = function(){
+			this.media.play();
+		}
+		this.pause = function(){
+			this.media.pause();
+		}
+		this.replay = function(){
+			this.media.load(this.media.src);
+			this.bob.talk(phrases[0]);
+		}
 		this.ended = function(event){
 			console.log('video ended');
 			this.dispatchEvent(YeezyPainter.VIDEO_ENDED);

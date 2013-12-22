@@ -98,7 +98,7 @@ $(document).ready(function(){
 		$('.replay').removeClass('disabled');
 	});
 	$('.replay').click(function(){
-		app.start();
+		app.replay();
 	});
 	$('.pause').click(function(){
 		$(this).addClass('disabled');
