@@ -24,9 +24,13 @@
         <header class="clearfix">
 			<h1>Painting <span>made</span> <em>Yeezy</em></h1>
 			<nav class="clearfix">
+				<ul class='soundboard clearfix'>
+					<li class='tree' data-phrase="tree">Happy Little Trees</li>
+					<li class='mountains' data-phrase="mountains">Snow Covered Mountains</li>
+					<li class='cloud' data-phrase="cloud">Happy Little Clouds</li>
+				</ul>
 				<ul class="controls clearfix">
-					<!--li class='talk'>Make Bob Talk</li-->
-					<li class='talk'>Talk 2 Me, Bob</li>
+					<li class='talk disabled'>Talk 2 Me, Bob</li>
 					<li class='replay disabled'>Replay Video</li>
 					<li class='pause disabled'>Pause Video</li>
 					<li class='resume disabled'>Resume Video</li>

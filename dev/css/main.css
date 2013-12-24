@@ -160,6 +160,7 @@ header {
 }
 /* line 7, ../sass/_nav.scss */
 header h1 {
+  padding: 0;
   margin: 0 auto .5em;
   background-color: #fcf;
   border: 3px solid #000;
@@ -173,11 +174,11 @@ header h1 {
   background-size: 90% auto;
   background-position: center center;
 }
-/* line 21, ../sass/_nav.scss */
+/* line 22, ../sass/_nav.scss */
 header nav {
   padding: 0;
 }
-/* line 24, ../sass/_nav.scss */
+/* line 25, ../sass/_nav.scss */
 header nav .controls li {
   display: block;
   width: 123px;
@@ -191,25 +192,25 @@ header nav .controls li {
   margin: 0 auto .5em;
   cursor: pointer;
 }
-/* line 36, ../sass/_nav.scss */
+/* line 37, ../sass/_nav.scss */
 header nav .controls li:hover {
   border: 3px solid #fff;
   color: #fff;
 }
-/* line 40, ../sass/_nav.scss */
+/* line 41, ../sass/_nav.scss */
 header nav .controls li.disabled {
   cursor: default;
   display: none;
 }
-/* line 46, ../sass/_nav.scss */
+/* line 47, ../sass/_nav.scss */
 header nav .share-links {
   display: block;
-  margin: 0;
+  margin: 0 auto .5em;
   padding: 0;
   text-align: left;
   width: 126px;
 }
-/* line 52, ../sass/_nav.scss */
+/* line 53, ../sass/_nav.scss */
 header nav .share-links li {
   display: block;
   float: left;
@@ -217,11 +218,11 @@ header nav .share-links li {
   margin: 0;
   margin-right: 5%;
 }
-/* line 58, ../sass/_nav.scss */
+/* line 59, ../sass/_nav.scss */
 header nav .share-links li .li-text {
   display: none;
 }
-/* line 60, ../sass/_nav.scss */
+/* line 61, ../sass/_nav.scss */
 header nav .share-links li a {
   display: block;
   padding: 0;
@@ -235,37 +236,93 @@ header nav .share-links li a {
   background-image: url("../img/social-sprite.png");
   background-repeat: no-repeat;
 }
-/* line 73, ../sass/_nav.scss */
+/* line 74, ../sass/_nav.scss */
 header nav .share-links li a:hover {
   border: 3px solid #fff;
 }
-/* line 76, ../sass/_nav.scss */
+/* line 77, ../sass/_nav.scss */
 header nav .share-links li .a-facebook {
   background-position: 10px 6px;
 }
-/* line 78, ../sass/_nav.scss */
+/* line 79, ../sass/_nav.scss */
 header nav .share-links li .a-facebook:hover {
   background-position: -240px 6px;
 }
-/* line 82, ../sass/_nav.scss */
+/* line 83, ../sass/_nav.scss */
 header nav .share-links li .a-twitter {
   background-position: -71px 6px;
 }
-/* line 84, ../sass/_nav.scss */
+/* line 85, ../sass/_nav.scss */
 header nav .share-links li .a-twitter:hover {
   background-position: -321px 6px;
 }
-/* line 88, ../sass/_nav.scss */
+/* line 89, ../sass/_nav.scss */
 header nav .share-links li .a-email {
   background-position: -150px 6px;
 }
-/* line 90, ../sass/_nav.scss */
+/* line 91, ../sass/_nav.scss */
 header nav .share-links li .a-email:hover {
   background-position: -400px 6px;
 }
-/* line 94, ../sass/_nav.scss */
+/* line 95, ../sass/_nav.scss */
 header nav .share-links li:last-child {
   margin-right: 0;
+}
+/* line 100, ../sass/_nav.scss */
+header nav .soundboard {
+  display: block;
+  margin: 0 auto .5em;
+  padding: 0;
+  text-align: left;
+  width: 126px;
+}
+/* line 106, ../sass/_nav.scss */
+header nav .soundboard li {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  height: 36px;
+  margin-right: 6px;
+  background-image: url("../img/social-sprite.png");
+  background-repeat: no-repeat;
+  text-indent: -9999em;
+  border: 3px solid #000;
+  cursor: pointer;
+}
+/* line 119, ../sass/_nav.scss */
+header nav .soundboard li:last-child {
+  margin-right: 0;
+}
+/* line 122, ../sass/_nav.scss */
+header nav .soundboard li:hover {
+  border: 3px solid #fff;
+  color: #fff;
+}
+/* line 129, ../sass/_nav.scss */
+header nav .soundboard .tree {
+  background-position: 10px -29px;
+}
+/* line 131, ../sass/_nav.scss */
+header nav .soundboard .tree:hover {
+  background-position: -240px -29px;
+}
+/* line 135, ../sass/_nav.scss */
+header nav .soundboard .mountains {
+  background-position: -71px -29px;
+}
+/* line 137, ../sass/_nav.scss */
+header nav .soundboard .mountains:hover {
+  background-position: -321px -29px;
+}
+/* line 141, ../sass/_nav.scss */
+header nav .soundboard .cloud {
+  background-position: -151px -29px;
+}
+/* line 143, ../sass/_nav.scss */
+header nav .soundboard .cloud:hover {
+  background-position: -401px -29px;
 }
 
 /* line 23, ../sass/main.scss */

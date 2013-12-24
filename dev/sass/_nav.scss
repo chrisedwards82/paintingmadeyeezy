@@ -5,6 +5,7 @@ header {
 	padding: 1em;
 	margin-left: 1em;
 	h1{
+		padding: 0;
 		margin: 0 auto .5em;
 		background-color: #fcf;
 		border: 3px solid #000;
@@ -45,7 +46,7 @@ header {
 		}
 		.share-links {
 			display: block;
-			margin: 0;
+			margin: 0 auto .5em;
 			padding: 0;
 			text-align: left;
 			width: 126px;
@@ -95,6 +96,54 @@ header {
 					margin-right: 0;
 				};
 			}	
+		}
+		.soundboard {
+			display: block;
+			margin: 0 auto .5em;
+			padding: 0;
+			text-align: left;
+			width: 126px;
+			li{
+				display: block;
+				float: left;
+				margin: 0;
+				padding: 0;
+				width: 32px;
+				height: 36px;
+				margin-right: 6px;
+				background-image: url('../img/social-sprite.png');
+				background-repeat: no-repeat;
+				text-indent: -9999em;
+				border: 3px solid #000;
+				cursor: pointer;
+				&:last-child{
+					margin-right: 0;
+				}
+				&:hover{
+					border: 3px solid #fff;
+					color: #fff;
+				}
+				
+			}
+			$top:-29px;
+			.tree {
+				background-position: 10px $top;
+				&:hover{
+					background-position: -240px $top;	
+				}
+			}
+			.mountains {
+				background-position: -71px $top;
+				&:hover{
+					background-position: -321px $top;
+				}
+			}
+			.cloud{
+				background-position: -151px $top;
+				&:hover{
+					background-position: -401px $top;
+				}
+			}
 		}
 	}
 }
