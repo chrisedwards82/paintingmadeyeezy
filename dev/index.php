@@ -25,9 +25,9 @@
 			<h1>Painting <span>made</span> <em>Yeezy</em></h1>
 			<nav class="clearfix">
 				<ul class='soundboard clearfix'>
-					<li class='tree' data-phrase="tree">Happy Little Trees</li>
-					<li class='mountains' data-phrase="mountains">Snow Covered Mountains</li>
-					<li class='cloud' data-phrase="cloud">Happy Little Clouds</li>
+					<li class='tree' data-sound="tree">Happy Little Trees</li>
+					<li class='mountains' data-sound="mountains">Snow Covered Mountains</li>
+					<li class='cloud' data-sound="cloud">Happy Little Clouds</li>
 				</ul>
 				<ul class="controls clearfix">
 					<li class='talk disabled'>Talk 2 Me, Bob</li>

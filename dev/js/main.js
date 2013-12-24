@@ -82,6 +82,9 @@ $(document).ready(function(){
 		$('.talk').click(function(){
 			app.bob.talk(test_sound);
 		});
+		$('.soundboard>li').click(function(){
+			app.bob.talk($(this).attr('data-sound'));
+		});
 		$('body').addClass('intro');
 		$('#main').css({right:'-100%'});
 		$('#main').show();
