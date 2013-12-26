@@ -1,8 +1,9 @@
-@import 'bp/bp';
-@import "compass/reset";
 @import "compass";
+@import "compass/reset";
 @import "compass/css3";
 @import 'compass/utilities/general/clearfix';
+@import 'animate';
+@import 'bp/bp';
 @import 'fonts';
 
 /* ==========================================================================
@@ -11,7 +12,7 @@
 */
 
 body, html {
-	background-color: #ffccff;
+	background-color: #fcf;
 	font-family: Arial, Helvetica, sans-serif;
 	&.intro{
 		overflow:hidden;
@@ -106,7 +107,7 @@ footer {
 	}
 	#main {
 		width: 75%;
-		background-color: #f00;
+	//	background-color: #f00;
 		//width: 600px;
 		//height: 600px;
 		//position: relative;
@@ -120,10 +121,17 @@ footer {
 		margin: 0 auto;
 		//clear: right;
 		h1{
+			margin-right: .5em;
 			float: left;
 		}
 		nav{
 			float: left;
+			.controls{
+				li{
+					width: 122px;
+					margin-left: 1px;
+				}
+			}
 		}
 	}
 	#main {
@@ -138,7 +146,10 @@ footer {
 
 @media screen and (max-width: 480px){
 	#main {
-		background-color: #0f0;
+	//	background-color: #0f0;
+		width:100%;
+		height: 500px;
+		top: 150px
 	}
 }
 

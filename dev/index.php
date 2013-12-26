@@ -24,6 +24,8 @@
         <header class="clearfix">
 			<h1>Painting <span>made</span> <em>Yeezy</em></h1>
 			<nav class="clearfix">
+				<ul class='share-links clearfix'></ul>
+				
 				<ul class='soundboard clearfix'>
 					<li class='tree' data-sound="tree">Happy Little Trees</li>
 					<li class='mountains' data-sound="mountains">Snow Covered Mountains</li>
@@ -35,7 +37,6 @@
 					<li class='pause disabled'>Pause Video</li>
 					<li class='resume disabled'>Resume Video</li>
 				</ul>
-				<ul class='share-links clearfix'></ul>
 			</nav>
 		</header>
 		<section id="main">

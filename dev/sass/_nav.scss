@@ -27,13 +27,16 @@ header {
 				width: 123px;
 				text-align: center;
 				text-transform: uppercase;
-				font-family: "GothamBold";
+				font-family: "GothamMedium";
 				font-size: .8em;
 				line-height: .8em;
 				padding:.65em 0;
 				border: 3px solid #000;
 				margin: 0 auto .5em;
 				cursor: pointer;
+				@include transition-property(display);
+				@include transition-property(border,color);
+				@include transition-duration(.25s);
 				&:hover{
 					border: 3px solid #fff;
 					color: #fff;
@@ -41,6 +44,7 @@ header {
 				&.disabled{
 					cursor: default;
 					display: none;
+					//@include animate-bounceOut($class:true);
 				}
 			}		
 		}
@@ -70,9 +74,12 @@ header {
 					cursor: pointer;
 					background-image: url('../img/social-sprite.png');
 					background-repeat: no-repeat;
+					@include transition-property(border);
+					@include transition-duration(.25s);	
 				}
 				a:hover {
 					border: 3px solid #fff;
+					
 				}
 				.a-facebook {
 					background-position: 10px 6px;
@@ -116,6 +123,8 @@ header {
 				text-indent: -9999em;
 				border: 3px solid #000;
 				cursor: pointer;
+			 	@include transition-property(border);
+				@include transition-duration(.25s);
 				&:last-child{
 					margin-right: 0;
 				}
@@ -141,7 +150,7 @@ header {
 			.cloud{
 				background-position: -151px $top;
 				&:hover{
-					background-position: -401px $top;
+					background-position: -401px ($top+2);
 				}
 			}
 		}
