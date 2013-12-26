@@ -3,13 +3,23 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<?php
+		$title = 'The Joy of Painting Made Yeezy';
+		$description = 'Close your eyes and let the word paint a thousand pictures. One happy little tree is worth a thousand brushes.';
+	?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <title><?php echo $title;?></title>
+        <meta name="description" content="<?php echo $description;?>">
+		<meta property="og:title" content="<?php echo $title;?>"/>
+		<meta property="og:description" content="<?php echo $description;?>"/>
+		<meta property="og:site_name" content="<?php echo $title?>"/>
+		<meta property="og:type" content="website" />
+		<!--meta property="og:audio" content="link to mp3?" /-->
+		<meta property="og:url" content="http://www.paitingmadeyeezy.com" />
+		<meta property="og:image" content="http://www.paitingmadeyeezy.com/img/og.png" />
         <meta name="viewport" content="width=device-width">
-
         <link rel="stylesheet" href="css/normalize.min.css">
 		<!--link rel="stylesheet" href="css/mediaelementplayer.min.css" /-->
         <link rel="stylesheet" href="css/main.css">
@@ -25,7 +35,6 @@
 			<h1>Painting <span>made</span> <em>Yeezy</em></h1>
 			<nav class="clearfix">
 				<ul class='share-links clearfix'></ul>
-				
 				<ul class='soundboard clearfix'>
 					<li class='tree' data-sound="tree">Happy Little Trees</li>
 					<li class='mountains' data-sound="mountains">Snow Covered Mountains</li>
