@@ -457,22 +457,22 @@ footer p a:hover {
   header {
     margin: 0 auto;
   }
-  /* line 118, ../sass/main.scss */
+  /* line 116, ../sass/main.scss */
   header h1 {
     margin-right: .5em;
     float: left;
   }
-  /* line 122, ../sass/main.scss */
+  /* line 120, ../sass/main.scss */
   header nav {
     float: left;
   }
-  /* line 125, ../sass/main.scss */
+  /* line 123, ../sass/main.scss */
   header nav .controls li {
     width: 122px;
     margin-left: 1px;
   }
 
-  /* line 132, ../sass/main.scss */
+  /* line 130, ../sass/main.scss */
   #main {
     width: 100%;
     height: 70%;
@@ -481,19 +481,19 @@ footer p a:hover {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 143, ../sass/main.scss */
+  /* line 141, ../sass/main.scss */
   #main {
     width: 100%;
     height: 500px;
     top: 150px;
   }
 }
-/* line 151, ../sass/main.scss */
+/* line 149, ../sass/main.scss */
 .mejs-layers, .mejs-controls {
   display: none;
 }
 
-/* line 154, ../sass/main.scss */
+/* line 152, ../sass/main.scss */
 audio {
   display: none;
 }

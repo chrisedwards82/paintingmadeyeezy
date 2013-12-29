@@ -2,6 +2,7 @@ var app, test_sound;
 $(document).ready(function(){
 	var desc = $("meta[name=description]").attr('content');
     var title = $(document).find("title").text();
+	var showFallback = false;
 	$('.share-links').shareLinks({
 		media:'facebook,twitter,email',
 		description:desc,
@@ -68,13 +69,29 @@ $(document).ready(function(){
 		'bush',
 		'yellowochre'
 	];	
+	gifs =[
+		{src:'WEEEEEEE.gif',id:'wee'},
+		{src:'REVVVVV.gif',id:'rev'},
+		{src:'StillRevvin.gif',id:'rev2'}
+	];
 	test_sound = phrases[7];
-	app = new yeezypainter.YeezyPainter(phrases,cuePoints);
-	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_READY,function(){
+	app = new yeezypainter.YeezyPainter(phrases,cuePoints,gifs,showFallback);
+	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_READY,function(event){
+		//console.log(event);
+		//console.log(app.media.duration);
 		app.media.setVolume(.15);
 		app.start();
 		$('.controls>li').addClass('disabled');
 		$('.pause').removeClass('disabled');
+	});
+	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_FAIL,function(event){
+		//console.log('doesnt play youtube, show gifs instead');
+		$('.controls>li').addClass('disabled');
+		app.killVideoPlayer();
+		app.addEventListener(yeezypainter.YeezyPainter.GIFS_READY,function(event){
+			app.start();
+		});
+		app.loadGIFs();
 	});
 	//intro ui and initialize video player, video will start on player intialized
 	app.addEventListener(yeezypainter.YeezyPainter.ASSETS_LOADED,function(){
@@ -89,18 +106,23 @@ $(document).ready(function(){
 		$('#main').css({right:'-100%'});
 		$('#main').show();
 		$('#main').animate({right:0},500,function(){
-			app.initVideoPlayer();
 			$('#main').attr('style','display: block;')
 			$('body').removeClass('intro');	
+			if(showFallback){
+				app.start();
+			}else {
+				app.initVideoPlayer();
+			}
 		});
 	});
 	//
 	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_ENDED,function(){
-		//show/hide buttons here
 		$('.controls>li').addClass('disabled');
 		$('.replay').removeClass('disabled');
 	});
 	$('.replay').click(function(){
+		$('.controls>li').addClass('disabled');
+		$('.pause').removeClass('disabled');
 		app.replay();
 	});
 	$('.pause').click(function(){
@@ -109,7 +131,7 @@ $(document).ready(function(){
 		app.media.pause();	
 	});
 	$('.resume').click(function(){
-		$(this).addClass('disabled');
+		$('.controls>li').addClass('disabled');
 		$('.pause').removeClass('disabled');
 		app.media.play();
 	});
