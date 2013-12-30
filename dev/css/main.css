@@ -168,7 +168,7 @@ header {
 header h1 {
   padding: 0;
   margin: 0 auto .5em;
-  background-color: #fcf;
+  background-color: #000;
   border: 3px solid #000;
   color: #000;
   text-align: center;
@@ -201,10 +201,10 @@ header nav .controls li {
   -o-transition-property: display;
   -webkit-transition-property: display;
   transition-property: display;
-  -moz-transition-property: border, color;
-  -o-transition-property: border, color;
-  -webkit-transition-property: border, color;
-  transition-property: border, color;
+  -moz-transition-property: background-color, color;
+  -o-transition-property: background-color, color;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
   -moz-transition-duration: 0.25s;
   -o-transition-duration: 0.25s;
   -webkit-transition-duration: 0.25s;
@@ -212,7 +212,7 @@ header nav .controls li {
 }
 /* line 40, ../sass/_nav.scss */
 header nav .controls li:hover {
-  border: 3px solid #fff;
+  background-color: #000;
   color: #fff;
 }
 /* line 44, ../sass/_nav.scss */
@@ -253,10 +253,10 @@ header nav .share-links li a {
   cursor: pointer;
   background-image: url("../img/social-sprite.png");
   background-repeat: no-repeat;
-  -moz-transition-property: border;
-  -o-transition-property: border;
-  -webkit-transition-property: border;
-  transition-property: border;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
   -moz-transition-duration: 0.25s;
   -o-transition-duration: 0.25s;
   -webkit-transition-duration: 0.25s;
@@ -264,37 +264,37 @@ header nav .share-links li a {
 }
 /* line 80, ../sass/_nav.scss */
 header nav .share-links li a:hover {
-  border: 3px solid #fff;
+  background-color: #000;
 }
-/* line 84, ../sass/_nav.scss */
+/* line 83, ../sass/_nav.scss */
 header nav .share-links li .a-facebook {
   background-position: 10px 6px;
 }
-/* line 86, ../sass/_nav.scss */
+/* line 85, ../sass/_nav.scss */
 header nav .share-links li .a-facebook:hover {
   background-position: -240px 6px;
 }
-/* line 90, ../sass/_nav.scss */
+/* line 89, ../sass/_nav.scss */
 header nav .share-links li .a-twitter {
   background-position: -71px 6px;
 }
-/* line 92, ../sass/_nav.scss */
+/* line 91, ../sass/_nav.scss */
 header nav .share-links li .a-twitter:hover {
   background-position: -321px 6px;
 }
-/* line 96, ../sass/_nav.scss */
+/* line 95, ../sass/_nav.scss */
 header nav .share-links li .a-email {
   background-position: -150px 6px;
 }
-/* line 98, ../sass/_nav.scss */
+/* line 97, ../sass/_nav.scss */
 header nav .share-links li .a-email:hover {
   background-position: -400px 6px;
 }
-/* line 102, ../sass/_nav.scss */
+/* line 101, ../sass/_nav.scss */
 header nav .share-links li:last-child {
   margin-right: 0;
 }
-/* line 107, ../sass/_nav.scss */
+/* line 106, ../sass/_nav.scss */
 header nav .soundboard {
   display: block;
   margin: 0 auto .5em;
@@ -302,7 +302,7 @@ header nav .soundboard {
   text-align: left;
   width: 126px;
 }
-/* line 113, ../sass/_nav.scss */
+/* line 112, ../sass/_nav.scss */
 header nav .soundboard li {
   display: block;
   float: left;
@@ -316,47 +316,47 @@ header nav .soundboard li {
   text-indent: -9999em;
   border: 3px solid #000;
   cursor: pointer;
-  -moz-transition-property: border;
-  -o-transition-property: border;
-  -webkit-transition-property: border;
-  transition-property: border;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
   -moz-transition-duration: 0.25s;
   -o-transition-duration: 0.25s;
   -webkit-transition-duration: 0.25s;
   transition-duration: 0.25s;
 }
-/* line 128, ../sass/_nav.scss */
+/* line 127, ../sass/_nav.scss */
 header nav .soundboard li:last-child {
   margin-right: 0;
 }
-/* line 131, ../sass/_nav.scss */
+/* line 130, ../sass/_nav.scss */
 header nav .soundboard li:hover {
-  border: 3px solid #fff;
+  background-color: #000;
   color: #fff;
 }
 /* line 138, ../sass/_nav.scss */
 header nav .soundboard .tree {
-  background-position: 10px -29px;
+  background-position: 10px -33px;
 }
 /* line 140, ../sass/_nav.scss */
 header nav .soundboard .tree:hover {
-  background-position: -240px -29px;
+  background-position: -240px -33px;
 }
 /* line 144, ../sass/_nav.scss */
 header nav .soundboard .mountains {
-  background-position: -71px -29px;
+  background-position: -71px -33px;
 }
 /* line 146, ../sass/_nav.scss */
 header nav .soundboard .mountains:hover {
-  background-position: -321px -29px;
+  background-position: -321px -33px;
 }
 /* line 150, ../sass/_nav.scss */
 header nav .soundboard .cloud {
-  background-position: -151px -29px;
+  background-position: -151px -33px;
 }
 /* line 152, ../sass/_nav.scss */
 header nav .soundboard .cloud:hover {
-  background-position: -401px -27px;
+  background-position: -401px -31px;
 }
 
 /* line 24, ../sass/main.scss */
