@@ -4,6 +4,9 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<?php
+		include 'includes/Mobile_Detect.php';
+		$detect = new Mobile_Detect;
+		$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
 		$title = 'The Joy of Painting Made Yeezy';
 		$description = 'Close your eyes and let the word paint a thousand pictures. One happy little tree is worth a thousand brushes.';
 	?>
@@ -26,7 +29,7 @@
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body data-device-type="<?php echo $deviceType;?>">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->

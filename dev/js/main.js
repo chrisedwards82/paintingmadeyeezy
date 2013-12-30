@@ -2,7 +2,7 @@ var app, test_sound;
 $(document).ready(function(){
 	var desc = $("meta[name=description]").attr('content');
     var title = $(document).find("title").text();
-	var showFallback = false;
+	var showFallback = ($('body').attr('data-device-type') != 'computer');
 	$('.share-links').shareLinks({
 		media:'facebook,twitter,email',
 		description:desc,
