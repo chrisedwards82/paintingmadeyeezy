@@ -72,7 +72,8 @@ $(document).ready(function(){
 	gifs =[
 	//	{src:'WEEEEEEE.gif',id:'wee'},
 	//	{src:'REVVVVV.gif',id:'rev'},
-		{src:'StillRevvin.gif',id:'rev2'}
+		{src:'StillRevvin.gif',id:'rev2',cuePoints:{ 5:'therewego', 20:'therewego'}}
+		
 	];
 	test_sound = phrases[7];
 	app = new yeezypainter.YeezyPainter(phrases,cuePoints,gifs,showFallback);

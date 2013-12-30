@@ -62,7 +62,10 @@ this.yeezypainter = this.yeezypainter || {};
 			this.gifsLoaded();
 		};
 		this.gifProgress = function(event) {
-			console.log('gifProgress',event.params);
+			//console.log('gifProgress',event.params);
+			if(event.params.cuePoint){
+				this.bob.talk(event.params.cuePoint);
+			}
 		}
 		this.gifsLoaded = function(event){
 			console.log('gifsLoaded');
