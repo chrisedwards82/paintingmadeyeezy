@@ -1,13 +1,11 @@
 this.yeezypainter = this.yeezypainter || {};
 (function(){
 	function GIFPlayer(files,loader){
-		
 		var _files = files;
 		var _loader = loader;
 		var _currentGIF = 0, _superGIFs;
 		var _gifWrap, _gif,_proxyGIFLoaded;
 		var _int, _proxynf, _rate = 100;
-		
 		var _init = function(){
 			//
 			_gifWrap = document.getElementById('gif');
@@ -55,7 +53,7 @@ this.yeezypainter = this.yeezypainter || {};
 			}
 		}
 		var _createGIF = function(i){
-			var gif = _gif.cloneNode(false);
+			var gif = _gif;//.cloneNode(false);
 			gif.setAttribute('rel:animated_src',this.assetPath+_files[i].src);
 			_clearWrap.apply(this);
 			_gifWrap.appendChild(gif);
