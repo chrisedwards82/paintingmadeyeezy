@@ -5,7 +5,7 @@ this.yeezypainter = this.yeezypainter || {};
 		var _files = files;
 		var _loader = loader;
 		var _currentGIF = 0, _superGIFs;
-		var _gifWrap, _gif;
+		var _gifWrap, _gif,_proxyGIFLoaded;
 		var _int, _proxynf, _rate = 100;
 		
 		var _init = function(){
@@ -15,6 +15,7 @@ this.yeezypainter = this.yeezypainter || {};
 			_gifWrap.removeChild(_gif);
 			_superGIFs = [];
 			_proxynf = createjs.proxy(_nextFrame,this);
+			_proxyGIFLoaded = createjs.proxy(_gifLoaded,this);
 		};
 		var _nextGIF = function(){
 			console.log('nextGIF');
@@ -30,6 +31,7 @@ this.yeezypainter = this.yeezypainter || {};
 		var _nextFrame = function(event){
 			var currentFrame = this.supergif.get_current_frame();
 			var totalFrames = this.supergif.get_length();	
+			this.dispatchEvent(GIFPlayer.PROGRESS);
 			if(currentFrame<totalFrames-1){
 				console.log('_nextframe',currentFrame,totalFrames);
 				this.supergif.move_to(currentFrame+1);
@@ -58,8 +60,12 @@ this.yeezypainter = this.yeezypainter || {};
 			_clearWrap.apply(this);
 			_gifWrap.appendChild(gif);
 			this.supergif = _superGIFs[i] = new SuperGif({gif:gif,auto_play:false});
-			this.supergif.load(_proxynf);
-		}
+			this.supergif.load(_proxyGIFLoaded);
+		};
+		var _gifLoaded = function(params){
+			_nextGIF.call(this);
+		};
+		
 		this.play = function(){
 			if(!_superGIFs[_currentGIF]){
 				_createGIF.call(this,_currentGIF);

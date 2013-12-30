@@ -55,15 +55,16 @@ this.yeezypainter = this.yeezypainter || {};
 			this.dispatchEvent(YeezyPainter.ASSETS_LOADED); 
 		};
 		this.loadGIFs = function(){
-			_loadListener = createjs.proxy(this.gifsLoaded,this);
-			_loader.addEventListener("complete", _loadListener);
-			_loader.loadManifest(this.gifs.getManifest());
+			//_loadListener = createjs.proxy(this.gifsLoaded,this);
+			//_loader.addEventListener("complete", _loadListener);
+			//_loader.loadManifest(this.gifs.getManifest());
+			this.gifsLoaded();
 		};
 		this.gifsLoaded = function(event){
 			console.log('gifsLoaded');
 			_loader.removeEventListener('complete', _loadListener);
 			this.dispatchEvent(YeezyPainter.GIFS_READY);
-		}
+		};
 		this.initVideoPlayer = function(){
 			//console.log('init video player');
 			var success = createjs.proxy(this.onVideoReady,this);
