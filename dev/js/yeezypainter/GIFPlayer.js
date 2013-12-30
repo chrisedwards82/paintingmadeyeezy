@@ -17,22 +17,29 @@ this.yeezypainter = this.yeezypainter || {};
 		};
 		var _nextGIF = function(){
 			console.log('nextGIF');
+			var event; 
 			if(_currentGIF < _files.length-1){
 				_currentGIF++;
-				this.dispatchEvent(GIFPlayer.NEXT_GIF);
+				event = new createjs.Event(GIFPlayer.NEXT_GIF);
+				event.params = {index:_currentGIF};
+				this.dispatchEvent(event);
 				this.play();
 			}else {
 				_currentGIF = 0;
-				this.dispatchEvent(GIFPlayer.COMPLETE);
+				event = new createjs.Event(GIFPlayer.COMPLETE);
+				this.dispatchEvent(event);
 			}
 		}
-		var _nextFrame = function(event){
+		var _nextFrame = function(){
 			var currentFrame = this.supergif.get_current_frame();
 			var totalFrames = this.supergif.get_length();	
-			this.dispatchEvent(GIFPlayer.PROGRESS);
-			if(currentFrame<totalFrames-1){
-				console.log('_nextframe',currentFrame,totalFrames);
-				this.supergif.move_to(currentFrame+1);
+			var event = new createjs.Event(GIFPlayer.PROGRESS);
+			event.params = {currentFrame:currentFrame,totalFrames:totalFrames};
+			this.dispatchEvent(event);
+			if(currentFrame<=totalFrames){
+				//console.log('_nextframe',currentFrame,totalFrames);
+				//this.supergif.move_to(currentFrame+1);
+				this.supergif.move_relative(1);
 				_int = setTimeout(_proxynf,_rate);
 			}else {
 				_nextGIF.call(this);
@@ -60,6 +67,7 @@ this.yeezypainter = this.yeezypainter || {};
 			this.supergif.load(_proxyGIFLoaded);
 		};
 		var _gifLoaded = function(params){
+			this.dispatchEvent(GIFPlayer.GIF_LOADED);
 			_nextGIF.call(this);
 		};
 		
@@ -78,12 +86,18 @@ this.yeezypainter = this.yeezypainter || {};
 		this.stop=function(){
 			clearTimeout(_int);
 		}
+		this.get_current_gif = function(){
+			return _files[_currentGIF];
+		}
 		this.supergif = null;
 		this.assetPath = 'img/gif/';
 		_init.call(this);
 	};
 	var p = GIFPlayer.prototype;
+	
+	
 	//
+	GIFPlayer.GIF_LOADED = 'gifLoaded';
 	GIFPlayer.NEXT_GIF = 'nextgif';
 	GIFPlayer.COMPLETE = 'complete';
 	GIFPlayer.PROGRESS = 'progress';

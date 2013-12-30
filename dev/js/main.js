@@ -70,8 +70,8 @@ $(document).ready(function(){
 		'yellowochre'
 	];	
 	gifs =[
-		{src:'WEEEEEEE.gif',id:'wee'},
-		{src:'REVVVVV.gif',id:'rev'},
+	//	{src:'WEEEEEEE.gif',id:'wee'},
+	//	{src:'REVVVVV.gif',id:'rev'},
 		{src:'StillRevvin.gif',id:'rev2'}
 	];
 	test_sound = phrases[7];

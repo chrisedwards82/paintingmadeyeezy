@@ -58,8 +58,12 @@ this.yeezypainter = this.yeezypainter || {};
 			//_loadListener = createjs.proxy(this.gifsLoaded,this);
 			//_loader.addEventListener("complete", _loadListener);
 			//_loader.loadManifest(this.gifs.getManifest());
+			this.gifs.addEventListener(yeezypainter.GIFPlayer.PROGRESS,createjs.proxy(this.gifProgress,this));
 			this.gifsLoaded();
 		};
+		this.gifProgress = function(event) {
+			console.log('gifProgress',event.params);
+		}
 		this.gifsLoaded = function(event){
 			console.log('gifsLoaded');
 			_loader.removeEventListener('complete', _loadListener);
