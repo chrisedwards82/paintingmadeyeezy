@@ -53,11 +53,10 @@ this.yeezypainter = this.yeezypainter || {};
 			}
 		}
 		var _createGIF = function(i){
-			var gif = _gif;//.cloneNode(false);
-			gif.setAttribute('rel:animated_src',this.assetPath+_files[i].src);
+			_gif.setAttribute('rel:animated_src',this.assetPath+_files[i].src);
 			_clearWrap.apply(this);
-			_gifWrap.appendChild(gif);
-			this.supergif = _superGIFs[i] = new SuperGif({gif:gif,auto_play:false});
+			_gifWrap.appendChild(_gif);
+			this.supergif = _superGIFs[i] = new SuperGif({gif:_gif,auto_play:false});
 			this.supergif.load(_proxyGIFLoaded);
 		};
 		var _gifLoaded = function(params){
