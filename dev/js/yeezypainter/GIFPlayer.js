@@ -4,7 +4,7 @@ this.yeezypainter = this.yeezypainter || {};
 		var _data = data;
 		var _loader = loader;
 		var _currentGIF = 0, _superGIFs;
-		var _gifWrap, _gif,_proxyGIFLoaded;
+		var _gifWrap, _gif,_proxyGIFLoaded, _proxyGIFLoading;	
 		var _int, _proxynf, _rate = 100;
 		var _init = function(){
 			//
@@ -14,6 +14,7 @@ this.yeezypainter = this.yeezypainter || {};
 			_superGIFs = [];
 			_proxynf = createjs.proxy(_nextFrame,this);
 			_proxyGIFLoaded = createjs.proxy(_gifLoaded,this);
+			_proxyGIFLoading = createjs.proxy(_gifLoading,this);
 		};
 		var _nextGIF = function(){
 			console.log('nextGIF');
@@ -31,6 +32,7 @@ this.yeezypainter = this.yeezypainter || {};
 			}
 		}
 		var _nextFrame = function(){
+			this.supergif.move_relative(1);
 			var currentFrame = this.supergif.get_current_frame();
 			var totalFrames = this.supergif.get_length();
 			var data = _data[_currentGIF];	
@@ -40,10 +42,8 @@ this.yeezypainter = this.yeezypainter || {};
 				event.params.cuePoint = data.cuePoints[currentFrame];
 			}
 			this.dispatchEvent(event);
-			if(currentFrame<=totalFrames){
+			if(currentFrame<totalFrames-1){
 				//console.log('_nextframe',currentFrame,totalFrames);
-				//this.supergif.move_to(currentFrame+1);
-				this.supergif.move_relative(1);
 				_int = setTimeout(_proxynf,_rate);
 			}else {
 				_nextGIF.call(this);
@@ -62,20 +62,28 @@ this.yeezypainter = this.yeezypainter || {};
 			if(this.supergif){
 				_gifWrap.removeChild(this.supergif.get_canvas().parentNode);
 			}
-		}
+		};
 		var _createGIF = function(i){
-			_gif.setAttribute('rel:animated_src',this.assetPath+_data[i].src);
+			//_gif.setAttribute('rel:animated_src',this.assetPath+_data[i].src);
+			_gif = _loader.getResult(_data[i].id);
 			_clearWrap.apply(this);
 			_gifWrap.appendChild(_gif);
 			this.supergif = _superGIFs[i] = new SuperGif({gif:_gif,auto_play:false});
+		//	_int = setTimeout(_proxyGIFLoading,_rate);
 			this.supergif.load(_proxyGIFLoaded);
 		};
 		var _gifLoaded = function(params){
+			clearTimeout(_int);
 			this.dispatchEvent(GIFPlayer.GIF_LOADED);
+			console.log('gifLoaded',params);
 			_nextGIF.call(this);
 		};
-		
+		var _gifLoading = function(){
+			console.log('gifLoading',this.supergif.get_current_frame());
+			_int = setTimeout(_proxyGIFLoading,_rate);
+		};
 		this.play = function(){
+			console.log('play',_currentGIF);
 			if(!_superGIFs[_currentGIF]){
 				_createGIF.call(this,_currentGIF);
 			}else {

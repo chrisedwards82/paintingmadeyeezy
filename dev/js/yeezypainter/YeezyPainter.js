@@ -55,11 +55,11 @@ this.yeezypainter = this.yeezypainter || {};
 			this.dispatchEvent(YeezyPainter.ASSETS_LOADED); 
 		};
 		this.loadGIFs = function(){
-			//_loadListener = createjs.proxy(this.gifsLoaded,this);
-			//_loader.addEventListener("complete", _loadListener);
-			//_loader.loadManifest(this.gifs.getManifest());
+			_loadListener = createjs.proxy(this.gifsLoaded,this);
+			_loader.addEventListener("complete", _loadListener);
+			_loader.loadManifest(this.gifs.getManifest());
 			this.gifs.addEventListener(yeezypainter.GIFPlayer.PROGRESS,createjs.proxy(this.gifProgress,this));
-			this.gifsLoaded();
+			//this.gifsLoaded();
 		};
 		this.gifProgress = function(event) {
 			//console.log('gifProgress',event.params);

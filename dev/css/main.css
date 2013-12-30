@@ -421,19 +421,19 @@ header nav .soundboard .cloud:hover {
   display: none;
 }
 
-/* line 84, ../sass/main.scss */
+/* line 82, ../sass/main.scss */
 .fallback #main #video #player {
   display: none;
 }
-/* line 87, ../sass/main.scss */
+/* line 85, ../sass/main.scss */
 .fallback #main #video #gif {
   position: absolute;
   display: block;
   width: 100%;
   top: 5%;
 }
-/* line 92, ../sass/main.scss */
-.fallback #main #video #gif img {
+/* line 90, ../sass/main.scss */
+.fallback #main #video #gif img, .fallback #main #video #gif canvas {
   border: 0;
   position: absolute;
   top: 0;
@@ -442,7 +442,7 @@ header nav .soundboard .cloud:hover {
   height: auto;
 }
 
-/* line 107, ../sass/main.scss */
+/* line 105, ../sass/main.scss */
 footer {
   width: 100%;
   color: #fff;
@@ -456,48 +456,48 @@ footer {
   z-index: 9;
   font-family: "GothamBold";
 }
-/* line 120, ../sass/main.scss */
+/* line 118, ../sass/main.scss */
 footer p a, footer p a:link, footer p a:active, footer p a:visited, footer p a:hover {
   color: #fff;
   text-decoration: none;
 }
-/* line 124, ../sass/main.scss */
+/* line 122, ../sass/main.scss */
 footer p a:hover {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 760px) {
-  /* line 133, ../sass/main.scss */
+  /* line 131, ../sass/main.scss */
   body {
     overflow: hidden;
   }
 
-  /* line 136, ../sass/main.scss */
+  /* line 134, ../sass/main.scss */
   #main {
     width: 75%;
   }
 }
 @media screen and (max-width: 660px) {
-  /* line 142, ../sass/main.scss */
+  /* line 140, ../sass/main.scss */
   header {
     margin: 0 auto;
   }
-  /* line 144, ../sass/main.scss */
+  /* line 142, ../sass/main.scss */
   header h1 {
     margin-right: .5em;
     float: left;
   }
-  /* line 148, ../sass/main.scss */
+  /* line 146, ../sass/main.scss */
   header nav {
     float: left;
   }
-  /* line 151, ../sass/main.scss */
+  /* line 149, ../sass/main.scss */
   header nav .controls li {
     width: 122px;
     margin-left: 1px;
   }
 
-  /* line 158, ../sass/main.scss */
+  /* line 156, ../sass/main.scss */
   #main {
     width: 100%;
     height: 70%;
@@ -506,19 +506,19 @@ footer p a:hover {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 169, ../sass/main.scss */
+  /* line 167, ../sass/main.scss */
   #main {
     width: 100%;
     height: 500px;
     top: 150px;
   }
 }
-/* line 177, ../sass/main.scss */
+/* line 175, ../sass/main.scss */
 .mejs-layers, .mejs-controls {
   display: none;
 }
 
-/* line 180, ../sass/main.scss */
+/* line 178, ../sass/main.scss */
 audio {
   display: none;
 }

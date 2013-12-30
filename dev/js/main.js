@@ -71,7 +71,7 @@ $(document).ready(function(){
 	];	
 	gifs =[
 	//	{src:'WEEEEEEE.gif',id:'wee'},
-	//	{src:'REVVVVV.gif',id:'rev'},
+		{src:'REVVVVV.gif',id:'rev',cuePoints:{5:'mountains',22:'cloud'}},
 		{src:'StillRevvin.gif',id:'rev2',cuePoints:{ 5:'therewego', 20:'therewego'}}
 		
 	];
