@@ -809,14 +809,14 @@ var SuperGif = function ( opts ) {
 	var canvas, ctx, toolbar, tmpCanvas;
 	var initialized = false;
 	var load_callback = false;
-
+	var _loaded, _total;
 	return {
 		// play controls
 		play: player.play,
 		pause: player.pause,
 		move_relative: player.move_relative,
 		move_to: player.move_to,
-
+		
 		// getters for instance vars
 		get_playing      : function() { return player.playing },
 		get_canvas       : function() { return canvas },
@@ -824,6 +824,9 @@ var SuperGif = function ( opts ) {
 		get_loading      : function() { return loading },
 		get_auto_play    : function() { return options.auto_play },
 		get_length       : function() { return player.length() },
+		get_loaded       : function() {return {loaded:_loaded,total:_total} },
+		get_stream 		 : function() {return stream},
+		get_stream_info  : function() {return {pos:stream.pos,len:stream.len} },
 		get_current_frame: function() { return player.current_frame() },
 		load: function (callback) {
 
@@ -841,7 +844,11 @@ var SuperGif = function ( opts ) {
 				setTimeout(doParse, 0);
 			};
 			h.onprogress = function (e) {
-				if (e.lengthComputable) doShowProgress(e.loaded, e.total, true);
+				if (e.lengthComputable){
+					doShowProgress(e.loaded, e.total, true);
+					_loaded = e.loaded;
+					_total = e.total;
+				} 
 			};
 			h.onerror = function() { doLoadError('xhr'); };
 			h.open('GET', gif.getAttribute('rel:animated_src') || gif.src, true);
