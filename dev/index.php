@@ -50,6 +50,7 @@
 		</header>
 		<section id="main">
 			<article id="video">
+				<div id='gif'><img alt="Kanye West, Bound 2, Yeezus"/></div>
 				<video width="100%" height="100%" id="player">
 				    <!-- Pseudo HTML5 -->
 				    <source type="video/youtube" src="http://www.youtube.com/watch?v=BBAtAM7vtgc" />

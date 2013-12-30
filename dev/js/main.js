@@ -76,23 +76,6 @@ $(document).ready(function(){
 	];
 	test_sound = phrases[7];
 	app = new yeezypainter.YeezyPainter(phrases,cuePoints,gifs,showFallback);
-	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_READY,function(event){
-		//console.log(event);
-		//console.log(app.media.duration);
-		app.media.setVolume(.15);
-		app.start();
-		$('.controls>li').addClass('disabled');
-		$('.pause').removeClass('disabled');
-	});
-	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_FAIL,function(event){
-		//console.log('doesnt play youtube, show gifs instead');
-		$('.controls>li').addClass('disabled');
-		app.killVideoPlayer();
-		app.addEventListener(yeezypainter.YeezyPainter.GIFS_READY,function(event){
-			app.start();
-		});
-		app.loadGIFs();
-	});
 	//intro ui and initialize video player, video will start on player intialized
 	app.addEventListener(yeezypainter.YeezyPainter.ASSETS_LOADED,function(){
 		//show/hide buttons here
@@ -116,24 +99,50 @@ $(document).ready(function(){
 		});
 	});
 	//
-	app.addEventListener(yeezypainter.YeezyPainter.VIDEO_ENDED,function(){
-		$('.controls>li').addClass('disabled');
-		$('.replay').removeClass('disabled');
-	});
-	$('.replay').click(function(){
-		$('.controls>li').addClass('disabled');
-		$('.pause').removeClass('disabled');
-		app.replay();
-	});
-	$('.pause').click(function(){
-		$(this).addClass('disabled');
-		$('.resume').removeClass('disabled');
-		app.media.pause();	
-	});
-	$('.resume').click(function(){
-		$('.controls>li').addClass('disabled');
-		$('.pause').removeClass('disabled');
-		app.media.play();
-	});
+	app.gifs.addEventListener(yeezypainter.GIFPlayer.COMPLETE,createjs.proxy(app.replay,app));
+	if(showFallback){		
+		$('body').addClass('fallback');
+	} else {
+		app.addEventListener(yeezypainter.YeezyPainter.VIDEO_READY,function(event){
+			//console.log(event);
+			//console.log(app.media.duration);
+			app.media.setVolume(.15);
+			app.start();
+			$('.controls>li').addClass('disabled');
+			$('.pause').removeClass('disabled');
+		});
+		//if video is blocked or another error with youtube api
+		app.addEventListener(yeezypainter.YeezyPainter.VIDEO_FAIL,function(event){
+			//console.log('doesnt play youtube, show gifs instead');
+			app.killVideoPlayer();
+			$('.controls>li').addClass('disabled');
+			$('body').addClass('fallback');
+			$('#player').attr('style','');
+			app.addEventListener(yeezypainter.YeezyPainter.GIFS_READY,function(event){
+				app.start();
+			});
+			app.loadGIFs();
+		});
+		// ui binding for video playback
+		app.addEventListener(yeezypainter.YeezyPainter.VIDEO_ENDED,function(){
+			$('.controls>li').addClass('disabled');
+			$('.replay').removeClass('disabled');
+		});
+		$('.replay').click(function(){
+			$('.controls>li').addClass('disabled');
+			$('.pause').removeClass('disabled');
+			app.replay();
+		});
+		$('.pause').click(function(){
+			$(this).addClass('disabled');
+			$('.resume').removeClass('disabled');
+			app.media.pause();	
+		});
+		$('.resume').click(function(){
+			$('.controls>li').addClass('disabled');
+			$('.pause').removeClass('disabled');
+			app.media.play();
+		});
+	}
 	app.loadAssets();
 });

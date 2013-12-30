@@ -72,6 +72,8 @@ this.yeezypainter = this.yeezypainter || {};
 		};
 		this.killVideoPlayer = function(){
 			this.media.remove();
+			_player.remove();
+			_node.remove();
 		};
 		this.onVideoReady = function(media, node, player){
 			//$('#' + node.id + '-mode').html('mode: ' + media.pluginType);
@@ -128,9 +130,14 @@ this.yeezypainter = this.yeezypainter || {};
 			this.media.pause();
 		}
 		this.replay = function(){
-			this.media.load(this.media.src);
-			this.bob.talk(phrases[0]);
-			_checkPlayback.apply(this);
+			if(_showFallback){
+				console.log('replay');
+				this.gifs.play();
+			}else{
+				this.media.load(this.media.src);
+				this.bob.talk(phrases[0]);
+				_checkPlayback.apply(this);
+			}
 		}
 		this.ended = function(event){
 			console.log('video ended');
