@@ -38,10 +38,8 @@ this.yeezypainter = this.yeezypainter || {};
 			var data = _data[_currentGIF];	
 			var event = new createjs.Event(GIFPlayer.PROGRESS);
 			event.params = {currentFrame:currentFrame,totalFrames:totalFrames};
-			if(data.cuePoints){
-				event.params.cuePoint = data.cuePoints[currentFrame];
-			}
 			this.dispatchEvent(event);
+			_checkCuePoint.call(this,data,currentFrame);
 			if(currentFrame<totalFrames-1){
 				//console.log('_nextframe',currentFrame,totalFrames);
 				_int = setTimeout(_proxynf,_rate);
@@ -49,6 +47,14 @@ this.yeezypainter = this.yeezypainter || {};
 				_nextGIF.call(this);
 			}
 		};
+		var _checkCuePoint = function(data,frame){
+			var event;
+			if(data.cuePoints && data.cuePoints[frame]){
+				event = new createjs.Event(GIFPlayer.CUE_POINT);
+				event.params = {currentFrame:frame,cuePoint:data.cuePoints[frame]};
+				this.dispatchEvent(event);
+			}
+		}
 		this.getManifest = function(){
 			var manifest = [];
 			var i = 0;
@@ -79,8 +85,9 @@ this.yeezypainter = this.yeezypainter || {};
 			_nextGIF.call(this);
 		};
 		var _gifLoading = function(){
-			console.log('gifLoading',_int,this.supergif.get_current_frame());
-			//_int = setTimeout(_proxyGIFLoading,_rate);
+			var frame = this.supergif.get_length();
+			var data = _data[_currentGIF];
+			_checkCuePoint.call(this,data,frame);
 		};
 		this.play = function(){
 			console.log('play',_currentGIF);

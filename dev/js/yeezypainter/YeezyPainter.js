@@ -59,6 +59,8 @@ this.yeezypainter = this.yeezypainter || {};
 			_loader.addEventListener("complete", _loadListener);
 			_loader.loadManifest(this.gifs.getManifest());
 			this.gifs.addEventListener(yeezypainter.GIFPlayer.PROGRESS,createjs.proxy(this.gifProgress,this));
+			this.gifs.addEventListener(yeezypainter.GIFPlayer.CUE_POINT,createjs.proxy(this.gifProgress,this));
+
 			//this.gifsLoaded();
 		};
 		this.gifProgress = function(event) {
