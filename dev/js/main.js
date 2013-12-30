@@ -70,10 +70,9 @@ $(document).ready(function(){
 		'yellowochre'
 	];	
 	gifs =[
-	//	{src:'WEEEEEEE.gif',id:'wee'},
-		{src:'REVVVVV.gif',id:'rev',cuePoints:{5:'mountains',22:'cloud'}},
+		{src:'OutOfFocus.gif',id:'focus',cuePoints:{2:'mountains',15:'tree'}},
+		{src:'REVVVVV.gif',id:'rev',cuePoints:{15:'cloud'}},
 		{src:'StillRevvin.gif',id:'rev2',cuePoints:{ 5:'therewego', 20:'therewego'}}
-		
 	];
 	test_sound = phrases[7];
 	app = new yeezypainter.YeezyPainter(phrases,cuePoints,gifs,showFallback);

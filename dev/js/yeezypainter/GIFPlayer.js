@@ -69,7 +69,7 @@ this.yeezypainter = this.yeezypainter || {};
 			_clearWrap.apply(this);
 			_gifWrap.appendChild(_gif);
 			this.supergif = _superGIFs[i] = new SuperGif({gif:_gif,auto_play:false});
-		//	_int = setTimeout(_proxyGIFLoading,_rate);
+			_int = setInterval(_proxyGIFLoading,_rate);
 			this.supergif.load(_proxyGIFLoaded);
 		};
 		var _gifLoaded = function(params){
@@ -79,8 +79,8 @@ this.yeezypainter = this.yeezypainter || {};
 			_nextGIF.call(this);
 		};
 		var _gifLoading = function(){
-			console.log('gifLoading',this.supergif.get_current_frame());
-			_int = setTimeout(_proxyGIFLoading,_rate);
+			console.log('gifLoading',_int,this.supergif.get_current_frame());
+			//_int = setTimeout(_proxyGIFLoading,_rate);
 		};
 		this.play = function(){
 			console.log('play',_currentGIF);
