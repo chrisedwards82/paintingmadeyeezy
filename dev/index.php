@@ -9,6 +9,9 @@
 		$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
 		$title = 'The Joy of Painting Made Yeezy';
 		$description = 'Close your eyes and let the word paint a thousand pictures. One happy little tree is worth a thousand brushes.';
+		if(isset($_GET['gif'])){
+			$deviceType = 'computer_gif';
+		}
 	?>
     <head>
         <meta charset="utf-8">
