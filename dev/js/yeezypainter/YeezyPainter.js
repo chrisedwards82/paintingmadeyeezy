@@ -22,7 +22,7 @@ this.yeezypainter = this.yeezypainter || {};
 			var notPlaying = setTimeout(createjs.proxy(function(){
 				_showFallback = true;
 				this.dispatchEvent(YeezyPainter.VIDEO_FAIL);
-			},this) ,1000);
+			},this) ,2000);
 			this.media.addEventListener('playing',createjs.proxy(function(event){
 				clearTimeout(notPlaying);
 				_showFallback = false;

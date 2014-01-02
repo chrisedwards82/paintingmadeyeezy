@@ -43,12 +43,6 @@ body, html {
 		.mouth{
 			background-image: url('../img/bob_mouth.png');
 		}
-		.brush{
-			background-image: url('../img/bob_brush_a.png');
-			&.b{
-				background-image: url('../img/bob_brush_b.png');
-			}
-		}
 		.mouth, .brush{
 			background-size: 100% auto;
 			background-repeat: no-repeat;
@@ -60,7 +54,17 @@ body, html {
 			left: 0;
 			z-index:9;
 		}
-	
+		.brush{
+			background-image: url('../img/bob_brush_a.png');
+			@include transition-property(background-position);			
+			//@include transition-property(width);		
+			@include transition-duration(.4s);
+			&.b{
+			//	width:99%;
+			background-position: 0 -5%;
+				background-image: url('../img/bob_brush_b.png');
+			}
+		}
 	}
 	#video{
 		position: absolute;
