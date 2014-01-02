@@ -67,9 +67,10 @@ body, html {
 	}
 	#video{
 		position: absolute;
-		top:12%;
+		top:0;
 		width: 90%;
 		height: 60%;
+		padding-top: 10%;
 		background-color: #000;
 		z-index:7;
 		overflow: hidden;
