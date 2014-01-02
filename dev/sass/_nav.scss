@@ -156,3 +156,21 @@ header {
 		}
 	}
 }
+@media screen and (max-width:660px){
+	header {
+		margin: 0 auto;
+		h1{
+			margin-right: .5em;
+			float: left;
+		}
+		nav{
+			float: left;
+			.controls{
+				li{
+					width: 122px;
+					margin-left: 1px;
+				}
+			}
+		}
+	}
+}

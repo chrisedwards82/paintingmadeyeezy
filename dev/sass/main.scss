@@ -137,35 +137,16 @@ footer {
 }
 
 @media screen and (max-width:660px){
-	header {
-		margin: 0 auto;
-		h1{
-			margin-right: .5em;
-			float: left;
-		}
-		nav{
-			float: left;
-			.controls{
-				li{
-					width: 122px;
-					margin-left: 1px;
-				}
-			}
-		}
-	}
 	#main {
 		width: 100%;
 		height: 70%;
 		top: auto;
-		bottom: 0;
-		
+		bottom: 0;	
 	}
-	
 }
 
 @media screen and (max-width: 480px){
 	#main {
-	//	background-color: #0f0;
 		width:100%;
 		height: 500px;
 		top: 150px
