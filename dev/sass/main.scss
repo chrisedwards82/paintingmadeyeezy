@@ -78,29 +78,7 @@ body, html {
 	}
 	display: none;
 }
-.fallback {
-	#main {
-		#video{
-			#player{
-				display: none;
-			}
-			#gif{
-				position: absolute;
-				display: block;
-				width: 100%;
-				top: 5%;
-				img, canvas{
-					border: 0;
-					position: absolute;
-					top:0; left:0;
-					width: 100%;
-					height: auto;
-				}
-			
-			}
-		}
-	}
-}
+
 
 
 @media screen and (max-width: 760px){
@@ -128,7 +106,7 @@ body, html {
 		top: 200px
 	}
 }
-
+@import 'fallback';
 @import 'footer';
 
 .mejs-layers, .mejs-controls{
