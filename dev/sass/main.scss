@@ -20,7 +20,6 @@ body, html {
 }
 @import 'nav';
 
-
 #main{
 	position:absolute;
 	top: 0;
@@ -38,7 +37,6 @@ body, html {
 		background-position: top left;
 		background-size: 100% auto;
 		overflow: hidden;
-		//1266x1482
 		.mouth{
 			background-image: url('../img/bob_mouth.png');
 		}
@@ -69,6 +67,7 @@ body, html {
 		width: 90%;
 		height: 60%;
 		padding-top: 10%;
+		padding-bottom: 10%;
 		background-color: #000;
 		z-index:7;
 		overflow: hidden;
@@ -79,7 +78,14 @@ body, html {
 	display: none;
 }
 
-
+@media screen and (min-width: 900px){
+	#main {
+		#video{
+			padding-top: 12%;
+			padding-bottom: 12%;
+		}
+	}
+}
 
 @media screen and (max-width: 760px){
 	body{
