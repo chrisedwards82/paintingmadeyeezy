@@ -1,0 +1,23 @@
+footer {
+	width: 100%;
+	color: #fff;
+	background-color: #000;
+	position: absolute;
+	bottom: 0;
+	padding: 1em 0;
+	font-size: .5em;
+	text-align: center;
+	text-transform: uppercase;
+	z-index: 9;
+	font-family:"GothamBold";
+	p{
+		a, a:link, a:active, a:visited, a:hover{
+			color: #fff;
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+	}
+	
+}

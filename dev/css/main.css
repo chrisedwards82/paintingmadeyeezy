@@ -429,12 +429,12 @@ header nav .soundboard .cloud:hover {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
-/* line 61, ../sass/main.scss */
+/* line 60, ../sass/main.scss */
 #main #bob .brush.b {
   background-position: 0 -5%;
   background-image: url("../img/bob_brush_b.png");
 }
-/* line 68, ../sass/main.scss */
+/* line 66, ../sass/main.scss */
 #main #video {
   position: absolute;
   top: 0;
@@ -445,23 +445,23 @@ header nav .soundboard .cloud:hover {
   z-index: 7;
   overflow: hidden;
 }
-/* line 77, ../sass/main.scss */
+/* line 75, ../sass/main.scss */
 #main #video #gif {
   display: none;
 }
 
-/* line 86, ../sass/main.scss */
+/* line 84, ../sass/main.scss */
 .fallback #main #video #player {
   display: none;
 }
-/* line 89, ../sass/main.scss */
+/* line 87, ../sass/main.scss */
 .fallback #main #video #gif {
   position: absolute;
   display: block;
   width: 100%;
   top: 5%;
 }
-/* line 94, ../sass/main.scss */
+/* line 92, ../sass/main.scss */
 .fallback #main #video #gif img, .fallback #main #video #gif canvas {
   border: 0;
   position: absolute;
@@ -471,7 +471,35 @@ header nav .soundboard .cloud:hover {
   height: auto;
 }
 
-/* line 109, ../sass/main.scss */
+@media screen and (max-width: 760px) {
+  /* line 107, ../sass/main.scss */
+  body {
+    overflow: hidden;
+  }
+
+  /* line 110, ../sass/main.scss */
+  #main {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 660px) {
+  /* line 116, ../sass/main.scss */
+  #main {
+    width: 100%;
+    height: 70%;
+    top: 180px;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 125, ../sass/main.scss */
+  #main {
+    width: 100%;
+    height: 500px;
+    top: 200px;
+  }
+}
+/* line 1, ../sass/_footer.scss */
 footer {
   width: 100%;
   color: #fff;
@@ -485,50 +513,22 @@ footer {
   z-index: 9;
   font-family: "GothamBold";
 }
-/* line 122, ../sass/main.scss */
+/* line 14, ../sass/_footer.scss */
 footer p a, footer p a:link, footer p a:active, footer p a:visited, footer p a:hover {
   color: #fff;
   text-decoration: none;
 }
-/* line 126, ../sass/main.scss */
+/* line 18, ../sass/_footer.scss */
 footer p a:hover {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 760px) {
-  /* line 135, ../sass/main.scss */
-  body {
-    overflow: hidden;
-  }
-
-  /* line 138, ../sass/main.scss */
-  #main {
-    width: 75%;
-  }
-}
-@media screen and (max-width: 660px) {
-  /* line 144, ../sass/main.scss */
-  #main {
-    width: 100%;
-    height: 70%;
-    top: 180px;
-    bottom: 0;
-  }
-}
-@media screen and (max-width: 480px) {
-  /* line 153, ../sass/main.scss */
-  #main {
-    width: 100%;
-    height: 500px;
-    top: 150px;
-  }
-}
-/* line 160, ../sass/main.scss */
+/* line 135, ../sass/main.scss */
 .mejs-layers, .mejs-controls {
   display: none;
 }
 
-/* line 163, ../sass/main.scss */
+/* line 138, ../sass/main.scss */
 audio {
   display: none;
 }
